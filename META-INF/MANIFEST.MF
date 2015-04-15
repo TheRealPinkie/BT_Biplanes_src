@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+MIDlet-Data-Size: 1000
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Name: Biplanes sefan.ru
+Created-By: 1.4.1_01 (Sun Microsystems Inc.)
+MIDlet-Vendor: Morpheme Ltd.
+MIDlet-1: Biplanes sefan.ru, /icon.png, BluetoothBiplanes
+MIDlet-Version: 5.0
+MicroEdition-Profile: MIDP-1.0
