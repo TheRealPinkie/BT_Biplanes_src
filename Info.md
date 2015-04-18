@@ -14,7 +14,7 @@
 * n — dummy class
 
 # Resourses:
-* ad*.png — obviusly, ads
+* ad*.png — obviously, ads
 * f — main font (f.png — parsed)
 * fzb, fzr — in-game digits fonts (fzb.png, fzr.png — parsed)
 * r — some resourses (likely audio)
