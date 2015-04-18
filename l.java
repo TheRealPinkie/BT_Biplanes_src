@@ -5,34 +5,34 @@ import javax.bluetooth.RemoteDevice;
 import javax.bluetooth.ServiceRecord;
 
 public class l
-  implements DiscoveryListener {
-  public Vector a;
-  private final j b;
+    implements DiscoveryListener {
+    public Vector a;
+    private final j b;
 
-  private l(j paramj) {
-    this.b = paramj;
-    this.a = new Vector();
-  }
-
-  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
-    this.a.addElement(paramRemoteDevice);
-  }
-
-  public void inquiryCompleted(int paramInt) {
-    synchronized (this) {
-      notify();
+    private l(j paramj) {
+        this.b = paramj;
+        this.a = new Vector();
     }
-  }
 
-  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
-  }
+    public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
+        this.a.addElement(paramRemoteDevice);
+    }
 
-  public void serviceSearchCompleted(int paramInt1, int paramInt2) {
-  }
+    public void inquiryCompleted(int paramInt) {
+        synchronized (this) {
+            notify();
+        }
+    }
 
-  public l(j paramj, n paramn) {
-    this(paramj);
-  }
+    public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
+    }
+
+    public void serviceSearchCompleted(int paramInt1, int paramInt2) {
+    }
+
+    public l(j paramj, n paramn) {
+        this(paramj);
+    }
 }
 
 /* Location:           /Users/ilya/4fun/Biplanes/Bluetooth_Biplanes.jar

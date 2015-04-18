@@ -6,41 +6,41 @@ import javax.bluetooth.RemoteDevice;
 import javax.bluetooth.ServiceRecord;
 
 public class m
-  implements DiscoveryListener {
-  public Vector a;
-  private final j b;
+    implements DiscoveryListener {
+    public Vector a;
+    private final j b;
 
-  private m(j paramj) {
-    this.b = paramj;
-    this.a = new Vector();
-  }
-
-  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
-    DataElement localDataElement = null;
-    for (int i = 0; i < paramArrayOfServiceRecord.length; i++) {
-      localDataElement = paramArrayOfServiceRecord[i].getAttributeValue(256);
-      if ((localDataElement != null) && (localDataElement.getDataType() == 32) && (((String)localDataElement.getValue()).equals("BIPLANES")) && (!this.a.contains(paramArrayOfServiceRecord[i]))) {
-        this.a.addElement(paramArrayOfServiceRecord[i]);
-        break;
-      }
+    private m(j paramj) {
+        this.b = paramj;
+        this.a = new Vector();
     }
-  }
 
-  public void serviceSearchCompleted(int paramInt1, int paramInt2) {
-    synchronized (this) {
-      notify();
+    public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
+        DataElement localDataElement = null;
+        for (int i = 0; i < paramArrayOfServiceRecord.length; i++) {
+            localDataElement = paramArrayOfServiceRecord[i].getAttributeValue(256);
+            if ((localDataElement != null) && (localDataElement.getDataType() == 32) && (((String)localDataElement.getValue()).equals("BIPLANES")) && (!this.a.contains(paramArrayOfServiceRecord[i]))) {
+                this.a.addElement(paramArrayOfServiceRecord[i]);
+                break;
+            }
+        }
     }
-  }
 
-  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
-  }
+    public void serviceSearchCompleted(int paramInt1, int paramInt2) {
+        synchronized (this) {
+            notify();
+        }
+    }
 
-  public void inquiryCompleted(int paramInt) {
-  }
+    public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
+    }
 
-  public m(j paramj, n paramn) {
-    this(paramj);
-  }
+    public void inquiryCompleted(int paramInt) {
+    }
+
+    public m(j paramj, n paramn) {
+        this(paramj);
+    }
 }
 
 /* Location:           /Users/ilya/4fun/Biplanes/Bluetooth_Biplanes.jar
