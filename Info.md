@@ -6,12 +6,12 @@
 * e — I dunno
 * f — draws something
 * g — draws something
-* h — looks like audio parser
+* ~~h — looks like audio parser~~
 * i — I dunno
-* j — main BT class
-* k — audio player?
-* l, m — auxiliary BT
-* n — dummy class
+* ~~j — main BT class~~
+* ~~k — audio player?~~
+* ~~l, m — auxiliary BT~~
+* ~~n — dummy class~~
 
 # Resourses:
 * ad*.png — obviously, ads
