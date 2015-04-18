@@ -3,22 +3,18 @@ import javax.microedition.midlet.MIDlet;
 
 public class BluetoothBiplanes extends MIDlet
 {
-  private b a = new b(this);
-  private Display b = Display.getDisplay(this);
+  private b mainClass = new b(this);
+  private Display display = Display.getDisplay(this);
 
   public void startApp()
   {
-    this.b.setCurrent(this.a);
-    this.a.f();
+    this.display.setCurrent(this.mainClass);
+    this.mainClass.f();
   }
 
-  public void pauseApp()
-  {
-  }
+  public void pauseApp() { }
 
-  public void destroyApp(boolean paramBoolean)
-  {
-  }
+  public void destroyApp(boolean paramBoolean) { }
 
   static
   {
