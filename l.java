@@ -5,40 +5,32 @@ import javax.bluetooth.RemoteDevice;
 import javax.bluetooth.ServiceRecord;
 
 public class l
-  implements DiscoveryListener
-{
+  implements DiscoveryListener {
   public Vector a;
   private final j b;
 
-  private l(j paramj)
-  {
+  private l(j paramj) {
     this.b = paramj;
     this.a = new Vector();
   }
 
-  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass)
-  {
+  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
     this.a.addElement(paramRemoteDevice);
   }
 
-  public void inquiryCompleted(int paramInt)
-  {
-    synchronized (this)
-    {
+  public void inquiryCompleted(int paramInt) {
+    synchronized (this) {
       notify();
     }
   }
 
-  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord)
-  {
+  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
   }
 
-  public void serviceSearchCompleted(int paramInt1, int paramInt2)
-  {
+  public void serviceSearchCompleted(int paramInt1, int paramInt2) {
   }
 
-  public l(j paramj, n paramn)
-  {
+  public l(j paramj, n paramn) {
     this(paramj);
   }
 }

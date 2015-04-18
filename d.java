@@ -1,7 +1,6 @@
 import javax.microedition.lcdui.Graphics;
 
-public class d
-{
+public class d {
   public int a = -1;
   public int b;
   public int c;
@@ -9,19 +8,15 @@ public class d
   public int e;
   public int f;
 
-  public void a(Graphics paramGraphics)
-  {
-    if (this.f > 0)
-    {
+  public void a(Graphics paramGraphics) {
+    if (this.f > 0) {
       this.f -= 1;
-      if (this.f == 0)
-      {
+      if (this.f == 0) {
         this.a = -1;
         return;
       }
     }
-    if (((this.f == 0) || (this.f > 16)) && (this.f == 0))
-    {
+    if (((this.f == 0) || (this.f > 16)) && (this.f == 0)) {
       int i = this.a >> 5;
       int j = this.b >> 5;
       paramGraphics.drawImage(b.a8[this.e], i, j, 33);
@@ -35,8 +30,7 @@ public class d
         k = 1;
       else if ((j > 166) && (i > 111) && (i < 143))
         k = 1;
-      if ((k != 0) && (this.d > 0))
-      {
+      if ((k != 0) && (this.d > 0)) {
         this.d >>= 2;
         if (this.d < 5)
           this.a = -1;
@@ -48,8 +42,7 @@ public class d
     }
   }
 
-  public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
+  public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
     this.a = (paramInt1 << 5);
     this.b = (paramInt2 << 5);
     this.c = paramInt3;

@@ -17,8 +17,7 @@ import javax.microedition.io.StreamConnection;
 import javax.microedition.io.StreamConnectionNotifier;
 
 public class j
-  implements Runnable
-{
+  implements Runnable {
   private static final UUID a = new UUID("6252233F8F1E4beb85DBEB178C94826D", false);
   public DataInputStream b = null;
   public DataOutputStream c = null;
@@ -27,47 +26,38 @@ public class j
   public Thread f = null;
   public StreamConnection g = null;
 
-  public void a(boolean paramBoolean)
-  {
+  public void a(boolean paramBoolean) {
     d = paramBoolean;
     this.e = 1;
     this.f = new Thread(this);
     this.f.start();
   }
 
-  public void a(int paramInt, byte[] paramArrayOfByte)
-  {
-    try
-    {
+  public void a(int paramInt, byte[] paramArrayOfByte) {
+    try {
       this.c.writeInt(paramInt);
       this.c.writeInt(paramArrayOfByte.length);
       this.c.write(paramArrayOfByte);
       this.c.flush();
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
     }
   }
 
-  public void a()
-  {
+  public void a() {
     a(-254, new byte[0]);
   }
 
   public void b()
-    throws Exception
-  {
+    throws Exception {
     int i = this.b.readInt();
-    switch (i)
-    {
+    switch (i) {
     case -254:
       a(-255, new byte[0]);
-      try
-      {
+      try {
         Thread.sleep(2000L);
       }
-      catch (Exception localException)
-      {
+      catch (Exception localException) {
       }
       d();
       b.a(true);
@@ -83,75 +73,60 @@ public class j
     }
   }
 
-  private void d()
-  {
-    try
-    {
+  private void d() {
+    try {
       if (this.b != null)
         this.b.close();
       this.b = null;
     }
-    catch (Exception localException1)
-    {
+    catch (Exception localException1) {
     }
-    try
-    {
+    try {
       if (this.c != null)
         this.c.close();
       this.c = null;
     }
-    catch (Exception localException2)
-    {
+    catch (Exception localException2) {
     }
-    try
-    {
+    try {
       if (this.g != null)
         this.g.close();
       this.g = null;
     }
-    catch (Exception localException3)
-    {
+    catch (Exception localException3) {
     }
-    try
-    {
+    try {
       LocalDevice.getLocalDevice().setDiscoverable(0);
     }
-    catch (Exception localException4)
-    {
+    catch (Exception localException4) {
     }
   }
 
   public boolean c()
-    throws Exception
-  {
+    throws Exception {
     LocalDevice localLocalDevice = LocalDevice.getLocalDevice();
     DiscoveryAgent localDiscoveryAgent = localLocalDevice.getDiscoveryAgent();
     Object localObject1;
-    if (!d)
-    {
+    if (!d) {
       b.a(b.bk[40]);
       localLocalDevice.setDiscoverable(10390272);
       localObject1 = "btspp://localhost:6252233F8F1E4beb85DBEB178C94826D;name=BIPLANES";
       StreamConnectionNotifier localStreamConnectionNotifier = (StreamConnectionNotifier)Connector.open((String)localObject1);
-      try
-      {
+      try {
         this.g = localStreamConnectionNotifier.acceptAndOpen();
         this.b = new DataInputStream(this.g.openInputStream());
         this.c = new DataOutputStream(this.g.openOutputStream());
       }
-      catch (Exception localException)
-      {
+      catch (Exception localException) {
       }
       localLocalDevice.setDiscoverable(0);
       b.a(b.bk[41]);
     }
-    else
-    {
+    else {
       b.a(b.bk[42]);
       localLocalDevice.setDiscoverable(0);
       localObject1 = new l(this, null);
-      synchronized (localObject1)
-      {
+      synchronized (localObject1) {
         localDiscoveryAgent.startInquiry(10390272, (DiscoveryListener)localObject1);
         localObject1.wait();
       }
@@ -161,17 +136,14 @@ public class j
       m localm = new m(this, null);
       int i = 0;
       RemoteDevice localRemoteDevice = null;
-      while (localEnumeration.hasMoreElements())
-      {
+      while (localEnumeration.hasMoreElements()) {
         localRemoteDevice = (RemoteDevice)localEnumeration.nextElement();
-        synchronized (localm)
-        {
+        synchronized (localm) {
           i = localDiscoveryAgent.searchServices(new int[] { 256 }, new UUID[] { a }, localRemoteDevice, localm);
           localm.wait();
         }
       }
-      if (localm.a.size() == 0)
-      {
+      if (localm.a.size() == 0) {
         b.a(b.bk[43]);
         return false;
       }
@@ -185,13 +157,10 @@ public class j
     return true;
   }
 
-  public void run()
-  {
-    try
-    {
+  public void run() {
+    try {
       while (this.e != 4)
-        switch (this.e)
-        {
+        switch (this.e) {
         case 0:
           Thread.yield();
           break;
@@ -207,8 +176,7 @@ public class j
           Thread.sleep(b.z);
         }
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       this.e = 4;
     }
   }

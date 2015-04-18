@@ -7,8 +7,7 @@ import javax.microedition.media.Manager;
 import javax.microedition.media.Player;
 import javax.microedition.media.control.StopTimeControl;
 
-public class h
-{
+public class h {
   private static byte[] a;
   private static int[] b;
   private static int c;
@@ -22,34 +21,29 @@ public class h
   public static final String[] k = { "audio/midi", "audio/x-wav" };
 
   public static void a(DataInputStream paramDataInputStream)
-    throws Exception
-  {
+    throws Exception {
     int m = paramDataInputStream.readByte();
     int i2 = m;
-    do
-    {
+    do {
       int n = paramDataInputStream.readByte();
       System.out.println("type = " + n);
       int i1;
       byte[] arrayOfByte;
-      switch (n)
-      {
+      switch (n) {
       case 0:
       case 1:
         i1 = paramDataInputStream.readInt();
         arrayOfByte = new byte[i1];
         paramDataInputStream.readFully(arrayOfByte);
         ByteArrayInputStream localByteArrayInputStream = new ByteArrayInputStream(arrayOfByte);
-        if (n == 0)
-        {
+        if (n == 0) {
           System.out.println("midi file..");
           e = Manager.createPlayer(localByteArrayInputStream, k[n]);
           e.realize();
           e.prefetch();
           System.out.println("loaded midi file " + i1);
         }
-        else
-        {
+        else {
           g = Manager.createPlayer(localByteArrayInputStream, k[n]);
           g.realize();
           g.prefetch();
@@ -58,8 +52,7 @@ public class h
       case 2:
         int i4 = paramDataInputStream.readByte();
         i = new Sound[i4];
-        for (int i5 = 0; i5 < i4; i5++)
-        {
+        for (int i5 = 0; i5 < i4; i5++) {
           i1 = paramDataInputStream.readInt();
           arrayOfByte = new byte[i1];
           paramDataInputStream.readFully(arrayOfByte);
@@ -73,28 +66,24 @@ public class h
     a = new byte[c];
     paramDataInputStream.readFully(a);
     b = new int[c << 1];
-    for (int i3 = 0; i3 < c; i3++)
-    {
+    for (int i3 = 0; i3 < c; i3++) {
       b[(i3 << 1)] = paramDataInputStream.readInt();
       b[((i3 << 1) + 1)] = paramDataInputStream.readInt();
     }
   }
 
   public static void a(int paramInt1, int paramInt2)
-    throws Exception
-  {
+    throws Exception {
     int m = a[paramInt1];
     if (m == -1)
       return;
-    if (m == 2)
-    {
+    if (m == 2) {
       i[b[(paramInt1 << 1)]].play(paramInt2);
       return;
     }
     Player localPlayer = e;
     StopTimeControl localStopTimeControl = f;
-    switch (m)
-    {
+    switch (m) {
     case 1:
       localPlayer = g;
       localStopTimeControl = h;

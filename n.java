@@ -1,5 +1,4 @@
-public class n
-{
+public class n {
 }
 
 /* Location:           /Users/ilya/4fun/Biplanes/Bluetooth_Biplanes.jar

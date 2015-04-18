@@ -6,49 +6,39 @@ import javax.bluetooth.RemoteDevice;
 import javax.bluetooth.ServiceRecord;
 
 public class m
-  implements DiscoveryListener
-{
+  implements DiscoveryListener {
   public Vector a;
   private final j b;
 
-  private m(j paramj)
-  {
+  private m(j paramj) {
     this.b = paramj;
     this.a = new Vector();
   }
 
-  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord)
-  {
+  public void servicesDiscovered(int paramInt, ServiceRecord[] paramArrayOfServiceRecord) {
     DataElement localDataElement = null;
-    for (int i = 0; i < paramArrayOfServiceRecord.length; i++)
-    {
+    for (int i = 0; i < paramArrayOfServiceRecord.length; i++) {
       localDataElement = paramArrayOfServiceRecord[i].getAttributeValue(256);
-      if ((localDataElement != null) && (localDataElement.getDataType() == 32) && (((String)localDataElement.getValue()).equals("BIPLANES")) && (!this.a.contains(paramArrayOfServiceRecord[i])))
-      {
+      if ((localDataElement != null) && (localDataElement.getDataType() == 32) && (((String)localDataElement.getValue()).equals("BIPLANES")) && (!this.a.contains(paramArrayOfServiceRecord[i]))) {
         this.a.addElement(paramArrayOfServiceRecord[i]);
         break;
       }
     }
   }
 
-  public void serviceSearchCompleted(int paramInt1, int paramInt2)
-  {
-    synchronized (this)
-    {
+  public void serviceSearchCompleted(int paramInt1, int paramInt2) {
+    synchronized (this) {
       notify();
     }
   }
 
-  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass)
-  {
+  public void deviceDiscovered(RemoteDevice paramRemoteDevice, DeviceClass paramDeviceClass) {
   }
 
-  public void inquiryCompleted(int paramInt)
-  {
+  public void inquiryCompleted(int paramInt) {
   }
 
-  public m(j paramj, n paramn)
-  {
+  public m(j paramj, n paramn) {
     this(paramj);
   }
 }

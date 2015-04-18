@@ -2,23 +2,18 @@ import java.util.TimerTask;
 import javax.microedition.media.MediaException;
 import javax.microedition.media.Player;
 
-public class k extends TimerTask
-{
+public class k extends TimerTask {
   private Player a;
 
-  public k(Player paramPlayer)
-  {
+  public k(Player paramPlayer) {
     this.a = paramPlayer;
   }
 
-  public void run()
-  {
-    try
-    {
+  public void run() {
+    try {
       this.a.stop();
     }
-    catch (MediaException localMediaException)
-    {
+    catch (MediaException localMediaException) {
       localMediaException.printStackTrace();
     }
   }

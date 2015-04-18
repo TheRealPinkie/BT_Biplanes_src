@@ -15,8 +15,7 @@ import javax.microedition.midlet.MIDlet;
 import javax.microedition.rms.RecordStore;
 
 public final class b extends FullCanvas
-  implements Runnable
-{
+  implements Runnable {
   public static int a;
   public static boolean b;
   public static boolean c;
@@ -187,8 +186,7 @@ public final class b extends FullCanvas
   private static int d7;
   private static final char[][] d8 = { { '0', '_' }, { '1', '-', '@' }, { 'A', 'B', 'C', '2', 'a', 'b', 'c' }, { 'D', 'E', 'F', '3', 'd', 'e', 'f' }, { 'G', 'H', 'I', '4', 'g', 'h', 'i' }, { 'J', 'K', 'L', '5', 'j', 'k', 'l' }, { 'M', 'N', 'O', '6', 'm', 'n', 'o' }, { 'P', 'Q', 'R', 'S', '7', 'p', 'q', 'r', 's' }, { 'T', 'U', 'V', '8', 't', 'u', 'v' }, { 'W', 'X', 'Y', 'Z', '9', 'w', 'x', 'y', 'z' } };
 
-  public b(BluetoothBiplanes paramBluetoothBiplanes)
-  {
+  public b(BluetoothBiplanes paramBluetoothBiplanes) {
     bv = paramBluetoothBiplanes;
     r = getWidth();
     s = getHeight();
@@ -213,8 +211,7 @@ public final class b extends FullCanvas
     dx = new StringBuffer[2];
     dy = new int[2];
     int i1 = 2;
-    do
-    {
+    do {
       dx[i1] = new StringBuffer();
       i1--;
     }
@@ -230,19 +227,15 @@ public final class b extends FullCanvas
     i = true;
   }
 
-  public static void a(boolean paramBoolean)
-  {
+  public static void a(boolean paramBoolean) {
   }
 
-  public static void a(String paramString)
-  {
+  public static void a(String paramString) {
     bp = paramString;
   }
 
-  public static void a(int paramInt, DataInputStream paramDataInputStream)
-  {
-    try
-    {
+  public static void a(int paramInt, DataInputStream paramDataInputStream) {
+    try {
       an = paramInt;
       e locale1 = a6[1];
       e locale2 = a6[0];
@@ -258,22 +251,19 @@ public final class b extends FullCanvas
       locale1.f = br[(i1++)];
       locale2.p = br[(i1++)];
       int i2 = 2;
-      do
-      {
+      do {
         f localf = locale1.av[i2];
         localf.a = (br[(i1++)] & 0xFF);
         localf.b = (br[(i1++)] & 0xFF);
         i2--;
       }
       while (i2 >= 0);
-      for (int i3 = aq; i3 < ar; i3++)
-      {
+      for (int i3 = aq; i3 < ar; i3++) {
         aa[i3] = ((br[(i1++)] & 0xFF) * 2);
         ab[i3] = ((br[(i1++)] & 0xFF) * 2);
       }
       locale1.v = br[(i1++)];
-      if (locale1.v != 0)
-      {
+      if (locale1.v != 0) {
         locale1.w = ((br[(i1++)] & 0xFF) << 6);
         locale1.x = ((br[(i1++)] & 0xFF) << 6);
         locale1.aa = br[(i1++)];
@@ -284,8 +274,7 @@ public final class b extends FullCanvas
       else
         locale1.ae = br[(i1++)];
       int i4 = br[(i1++)];
-      if ((i4 & 0x1) != 0)
-      {
+      if ((i4 & 0x1) != 0) {
         locale1.m -= 1;
         if (locale1.m < 0)
           locale1.m = 0;
@@ -294,16 +283,14 @@ public final class b extends FullCanvas
       }
       if ((i4 & 0x2) != 0)
         locale1.f();
-      if ((i4 & 0x4) != 0)
-      {
+      if ((i4 & 0x4) != 0) {
         locale1.m -= 1;
         if (locale1.m < 0)
           locale1.m = 0;
         c(locale1);
         b(locale2);
       }
-      if ((i4 & 0x8) != 0)
-      {
+      if ((i4 & 0x8) != 0) {
         locale2.v = 3;
         locale2.aa = 0;
         locale1.m += 2;
@@ -312,11 +299,9 @@ public final class b extends FullCanvas
       }
       if ((i4 & 0x10) != 0)
         locale1.ao.v = 5;
-      if ((i4 & 0x20) != 0)
-      {
+      if ((i4 & 0x20) != 0) {
         locale2.f();
-        if (locale2.v == 0)
-        {
+        if (locale2.v == 0) {
           locale2.v = 3;
           locale2.aa = 0;
           locale1.m += 1;
@@ -325,8 +310,7 @@ public final class b extends FullCanvas
           bt = (byte)(bt + 64);
         }
       }
-      if ((i4 & 0x40) != 0)
-      {
+      if ((i4 & 0x40) != 0) {
         locale2.m += 1;
         c(locale2);
         b(locale2);
@@ -334,37 +318,30 @@ public final class b extends FullCanvas
       if ((i4 & 0x80) != 0)
         g();
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
   }
 
-  public static boolean b(boolean paramBoolean)
-  {
+  public static boolean b(boolean paramBoolean) {
     d = paramBoolean;
-    if (d)
-    {
+    if (d) {
       a6[1].ap = true;
       if (a6[0] == bx)
         o = 1;
       else
         o = 2;
     }
-    else
-    {
+    else {
       bp = bk[44];
     }
     return d;
   }
 
-  public void a()
-  {
-    switch (a)
-    {
+  public void a() {
+    switch (a) {
     case 7:
-      if ((as == 1) || (by != bw))
-      {
+      if ((as == 1) || (by != bw)) {
         a = 2;
         return;
       }
@@ -388,22 +365,17 @@ public final class b extends FullCanvas
     c();
   }
 
-  private static void j(int paramInt)
-  {
+  private static void j(int paramInt) {
     af[paramInt] = true;
     n();
   }
 
-  private static void n()
-  {
-    try
-    {
+  private static void n() {
+    try {
       g.g = b("/tm");
       int i1 = 3;
-      do
-      {
-        if (af[i1] == 0)
-        {
+      do {
+        if (af[i1] == 0) {
           g.g[(4 + i1)] = bk[5];
           g.g[(27 + i1)] = bk[5];
           g.g[(38 + i1)] = bk[5];
@@ -413,16 +385,13 @@ public final class b extends FullCanvas
       }
       while (i1 >= 0);
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
   }
 
-  private static void o()
-  {
-    try
-    {
+  private static void o() {
+    try {
       bm = new c("/f");
       bn = new c("/fzr");
       bo = new c("/fzb");
@@ -433,8 +402,7 @@ public final class b extends FullCanvas
       ac = new int[4];
       ad = new int[4];
       int i1 = 4;
-      do
-      {
+      do {
         ad[i1] = 10;
         i1--;
       }
@@ -455,8 +423,7 @@ public final class b extends FullCanvas
       al = 208 - s;
       bu = new d[50];
       int i2 = 50;
-      do
-      {
+      do {
         bu[i2] = new d();
         i2--;
       }
@@ -465,8 +432,7 @@ public final class b extends FullCanvas
       ab = new int[2];
       ae = new boolean[2];
       int i3 = 2;
-      do
-      {
+      do {
         aa[i3] = c(255);
         ab[i3] = c(104);
         ae[i3] = (c(2) == 0 ? 1 : false);
@@ -477,8 +443,7 @@ public final class b extends FullCanvas
       az = c(104);
       a6 = new e[2];
       int i4 = 2;
-      do
-      {
+      do {
         a6[i4] = new e(i4 == 0);
         i4--;
       }
@@ -519,26 +484,21 @@ public final class b extends FullCanvas
       cy = -1;
       a = 13;
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
   }
 
-  public static void c(boolean paramBoolean)
-  {
-    try
-    {
+  public static void c(boolean paramBoolean) {
+    try {
       k = true;
       RecordStore localRecordStore = RecordStore.openRecordStore("s", true);
       ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
       DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
-      if (localRecordStore.getSizeAvailable() >= 600)
-      {
+      if (localRecordStore.getSizeAvailable() >= 600) {
         for (int i1 = 0; i1 < 3; i1++)
           localDataOutputStream.writeBoolean(af[i1]);
-        for (int i2 = 0; i2 < 4; i2++)
-        {
+        for (int i2 = 0; i2 < 4; i2++) {
           localDataOutputStream.writeByte((byte)ac[i2]);
           localDataOutputStream.writeBoolean(ag[i2]);
           localDataOutputStream.writeByte((byte)ad[i2]);
@@ -556,28 +516,23 @@ public final class b extends FullCanvas
       localDataOutputStream.close();
       localByteArrayOutputStream.close();
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
       k = true;
     }
   }
 
-  public static boolean b()
-  {
-    try
-    {
+  public static boolean b() {
+    try {
       System.gc();
       RecordStore localRecordStore = RecordStore.openRecordStore("s", true);
-      if (localRecordStore.getNumRecords() > 0)
-      {
+      if (localRecordStore.getNumRecords() > 0) {
         byte[] arrayOfByte = localRecordStore.getRecord(1);
         ByteArrayInputStream localByteArrayInputStream = new ByteArrayInputStream(arrayOfByte);
         DataInputStream localDataInputStream = new DataInputStream(localByteArrayInputStream);
         for (int i1 = 0; i1 < 3; i1++)
           af[i1] = localDataInputStream.readBoolean();
-        for (int i2 = 0; i2 < 4; i2++)
-        {
+        for (int i2 = 0; i2 < 4; i2++) {
           ac[i2] = localDataInputStream.readByte();
           ag[i2] = localDataInputStream.readBoolean();
           ad[i2] = localDataInputStream.readByte();
@@ -591,32 +546,25 @@ public final class b extends FullCanvas
       }
       localRecordStore.closeRecordStore();
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
     }
     return false;
   }
 
-  public static void a(int paramInt1, int paramInt2)
-  {
-    try
-    {
+  public static void a(int paramInt1, int paramInt2) {
+    try {
       if (g)
         h.a(paramInt1, paramInt2);
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
   }
 
-  public static void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7)
-  {
+  public static void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7) {
     int i4 = 50;
-    do
-    {
-      if (bu[i4].a == -1)
-      {
+    do {
+      if (bu[i4].a == -1) {
         int i2 = paramInt5 - paramInt4;
         int i1 = c(i2) + paramInt4;
         i2 = paramInt7 - paramInt6;
@@ -631,10 +579,8 @@ public final class b extends FullCanvas
     while (i4 >= 0);
   }
 
-  public static void a(e parame)
-  {
-    if (as == 1)
-    {
+  public static void a(e parame) {
+    if (as == 1) {
       if (j.d)
         parame.b(0, v[1], 180, 3);
       else
@@ -647,14 +593,11 @@ public final class b extends FullCanvas
         parame.b(0, v[0], 180, 2);
   }
 
-  public void run()
-  {
+  public void run() {
     c = false;
-    while (!c)
-    {
+    while (!c) {
       DeviceControl.setLights(0, 100);
-      try
-      {
+      try {
         long l1 = System.currentTimeMillis() - ah;
         long l2 = x - l1;
         if (l2 > y)
@@ -664,21 +607,17 @@ public final class b extends FullCanvas
         if (cy >= 0)
           c();
         else
-          switch (a)
-          {
+          switch (a) {
           case 14:
             p += 1;
-            if (p == 50)
-            {
+            if (p == 50) {
               p = 0;
               q += 1;
-              if (q == 3)
-              {
+              if (q == 3) {
                 bv.destroyApp(true);
                 bv.notifyDestroyed();
               }
-              else
-              {
+              else {
                 c();
               }
             }
@@ -698,8 +637,7 @@ public final class b extends FullCanvas
           case 13:
             if (a2 == 0)
               a(0, 1);
-            if (++a2 > 120)
-            {
+            if (++a2 > 120) {
               a2 = 0;
               a = 0;
               c();
@@ -714,22 +652,18 @@ public final class b extends FullCanvas
               e = true;
             else if (as == 1)
               e = (!d) || (am - an < 2);
-            if (!e)
-            {
+            if (!e) {
               a4 += 1;
-              if (a4 > 50)
-              {
+              if (a4 > 50) {
                 if (cy == -1)
                   a(bk[18], 0);
                 a4 = 0;
               }
             }
-            else
-            {
+            else {
               a4 = 0;
             }
-            if ((e) && (d) && (as == 1))
-            {
+            if ((e) && (d) && (as == 1)) {
               e locale = a6[0];
               int i1 = 0;
               br[(i1++)] = ((byte)locale.a);
@@ -743,21 +677,18 @@ public final class b extends FullCanvas
               if (locale.ao.p > 2)
                 locale.ao.p = 0;
               int i3 = 2;
-              do
-              {
+              do {
                 br[(i1++)] = ((byte)locale.av[i3].a);
                 br[(i1++)] = ((byte)locale.av[i3].b);
                 i3--;
               }
               while (i3 >= 0);
-              for (int i4 = ao; i4 < ap; i4++)
-              {
+              for (int i4 = ao; i4 < ap; i4++) {
                 br[(i1++)] = ((byte)(aa[i4] / 2));
                 br[(i1++)] = ((byte)(ab[i4] / 2));
               }
               br[(i1++)] = ((byte)locale.v);
-              if (locale.v != 0)
-              {
+              if (locale.v != 0) {
                 br[(i1++)] = ((byte)(locale.w >> 6));
                 br[(i1++)] = ((byte)(locale.x >> 6));
                 br[(i1++)] = ((byte)locale.aa);
@@ -782,31 +713,26 @@ public final class b extends FullCanvas
           case 12:
           }
       }
-      catch (Exception localException)
-      {
+      catch (Exception localException) {
         localException.printStackTrace();
       }
     }
   }
 
-  public void c()
-  {
+  public void c() {
     serviceRepaints();
     repaint();
     Thread.yield();
   }
 
-  public static void d()
-  {
+  public static void d() {
     bw.ap = true;
     bx.ap = true;
-    if (o == 1)
-    {
+    if (o == 1) {
       a6[0].a(0, v[0], 180, 2);
       a6[1].a(0, v[1], 180, 3);
     }
-    else
-    {
+    else {
       a6[0].a(0, v[1], 180, 3);
       a6[1].a(0, v[0], 180, 2);
     }
@@ -817,10 +743,8 @@ public final class b extends FullCanvas
     a = 1;
   }
 
-  public static void a(int paramInt)
-  {
-    switch (paramInt)
-    {
+  public static void a(int paramInt) {
+    switch (paramInt) {
     case 6:
       a(bk[36], 0);
       break;
@@ -831,8 +755,7 @@ public final class b extends FullCanvas
       a = 11;
       break;
     case 21:
-      if (as == 1)
-      {
+      if (as == 1) {
         bq.a();
         bp = "";
         o = 0;
@@ -866,8 +789,7 @@ public final class b extends FullCanvas
     case 25:
     case 26:
     case 27:
-      if ((paramInt == 24) || (af[(paramInt - 1 - 24)] != 0))
-      {
+      if ((paramInt == 24) || (af[(paramInt - 1 - 24)] != 0)) {
         bq = null;
         System.gc();
         bq = new j();
@@ -891,8 +813,7 @@ public final class b extends FullCanvas
         a = 1;
         au = 30;
       }
-      else
-      {
+      else {
         a(bk[8], 0);
         g.a(0);
       }
@@ -901,8 +822,7 @@ public final class b extends FullCanvas
     case 29:
     case 30:
     case 31:
-      if ((paramInt == 28) || (af[(paramInt - 1 - 28)] != 0))
-      {
+      if ((paramInt == 28) || (af[(paramInt - 1 - 28)] != 0)) {
         bq = null;
         System.gc();
         bq = new j();
@@ -927,8 +847,7 @@ public final class b extends FullCanvas
         a = 1;
         au = 30;
       }
-      else
-      {
+      else {
         a(bk[8], 0);
         g.a(0);
       }
@@ -937,13 +856,11 @@ public final class b extends FullCanvas
     case 1:
     case 2:
     case 3:
-      if ((paramInt == 0) || (af[(paramInt - 1)] != 0))
-      {
+      if ((paramInt == 0) || (af[(paramInt - 1)] != 0)) {
         a6[0].ae = (35 + paramInt);
         g.a(25);
       }
-      else
-      {
+      else {
         a(bk[8], 0);
       }
       break;
@@ -951,8 +868,7 @@ public final class b extends FullCanvas
     case 17:
     case 18:
     case 19:
-      if ((paramInt - 16 == 0) || (af[(paramInt - 16 - 1)] != 0))
-      {
+      if ((paramInt - 16 == 0) || (af[(paramInt - 16 - 1)] != 0)) {
         a6[1].ae = (39 + paramInt - 16);
         a6[1].u = (paramInt - 16);
         a6[0].a(0, v[1], 180, 3);
@@ -960,8 +876,7 @@ public final class b extends FullCanvas
         as = 0;
         g.a(33);
       }
-      else
-      {
+      else {
         a(bk[8], 0);
       }
       break;
@@ -996,18 +911,14 @@ public final class b extends FullCanvas
     }
   }
 
-  public void e()
-  {
-    if (b0 > 0)
-    {
+  public void e() {
+    if (b0 > 0) {
       b0 -= 1;
       return;
     }
     int i1 = i.a();
-    if (cy >= 0)
-    {
-      switch (i1)
-      {
+    if (cy >= 0) {
+      switch (i1) {
       case 10:
         b(1);
         cz = 0;
@@ -1017,13 +928,11 @@ public final class b extends FullCanvas
         cz = 0;
         break;
       case 16:
-        if (c7)
-        {
+        if (c7) {
           cy = -1;
           c();
         }
-        else
-        {
+        else {
           b(2);
           cz = 0;
         }
@@ -1031,11 +940,9 @@ public final class b extends FullCanvas
       }
       return;
     }
-    switch (a)
-    {
+    switch (a) {
     case 11:
-      if (i1 == 16)
-      {
+      if (i1 == 16) {
         a = 2;
         h = false;
       }
@@ -1043,13 +950,11 @@ public final class b extends FullCanvas
         a(bk[21], 0);
       break;
     case 12:
-      if (i1 == 16)
-      {
+      if (i1 == 16) {
         a = 2;
         h = false;
       }
-      if (i1 == 15)
-      {
+      if (i1 == 15) {
         at += 1;
         if (at == 3)
           at = 0;
@@ -1059,22 +964,19 @@ public final class b extends FullCanvas
     case 8:
     case 9:
     case 10:
-      if (i1 == 16)
-      {
+      if (i1 == 16) {
         a();
         return;
       }
       break;
     case 5:
-      if (i1 != -66)
-      {
+      if (i1 != -66) {
         a = 7;
         a1 = Math.max(r, s) >> 1;
       }
       break;
     case 3:
-      switch (i1)
-      {
+      switch (i1) {
       case 15:
         h = false;
         a = 2;
@@ -1091,8 +993,7 @@ public final class b extends FullCanvas
       int i2 = 0;
       int i3 = 666;
       for (int i4 = 0; i4 != 10; i4++)
-        if (i1 == i4)
-        {
+        if (i1 == i4) {
           i3 = i4;
           i2 = 1;
           break;
@@ -1101,20 +1002,16 @@ public final class b extends FullCanvas
       d4 = System.currentTimeMillis();
       int i5 = 1050;
       if (i2 == 0)
-        if (i1 == 19)
-        {
+        if (i1 == 19) {
           i3 = 19;
         }
-        else
-        {
-          if ((i1 == 20) && (dw > 0))
-          {
+        else {
+          if ((i1 == 20) && (dw > 0)) {
             i(dw - 1);
             b1 = i3;
             return;
           }
-          if ((i1 == 21) && (dw < 1))
-          {
+          if ((i1 == 21) && (dw < 1)) {
             i(dw + 1);
             b1 = i3;
             return;
@@ -1122,23 +1019,19 @@ public final class b extends FullCanvas
         }
       if (i3 == 666)
         return;
-      if ((dx[dw].length() >= d0[dw]) && ((i2 == 0) || (d3 >= i5) || (b1 != i3) || (d2[dw] == 0)))
-      {
+      if ((dx[dw].length() >= d0[dw]) && ((i2 == 0) || (d3 >= i5) || (b1 != i3) || (d2[dw] == 0))) {
         if (i2 != 0)
           return;
         if (i1 != 19)
           return;
       }
       int i6 = d2[dw];
-      if (i6 == 0)
-      {
-        if (i2 != 0)
-        {
+      if (i6 == 0) {
+        if (i2 != 0) {
           dx[dw].append(i3);
           du += 1;
         }
-        else if (i1 == 19)
-        {
+        else if (i1 == 19) {
           du -= 1;
           if (du < 0)
             du = 0;
@@ -1146,10 +1039,8 @@ public final class b extends FullCanvas
             dx[dw].deleteCharAt(du);
         }
       }
-      else if (i2 != 0)
-      {
-        if ((d3 < i5) && (b1 == i3))
-        {
+      else if (i2 != 0) {
+        if ((d3 < i5) && (b1 == i3)) {
           d6 = false;
           d5 = System.currentTimeMillis() + d7;
           du -= 1;
@@ -1159,15 +1050,13 @@ public final class b extends FullCanvas
           dx[dw].setCharAt(du, d8[i3][dv]);
           du += 1;
         }
-        else
-        {
+        else {
           dv = 0;
           dx[dw].append(d8[i3][dv]);
           du += 1;
         }
       }
-      else if (i1 == 19)
-      {
+      else if (i1 == 19) {
         du -= 1;
         if (du < 0)
           du = 0;
@@ -1177,8 +1066,7 @@ public final class b extends FullCanvas
       b1 = i3;
       break;
     case 2:
-      switch (i1)
-      {
+      switch (i1) {
       case 10:
         g.b(0);
         break;
@@ -1200,10 +1088,8 @@ public final class b extends FullCanvas
       break;
     case 1:
     case 4:
-      if (i.c(10))
-      {
-        if (f)
-        {
+      if (i.c(10)) {
+        if (f) {
           cq -= 1;
           if (cq < 0)
             cq = 2;
@@ -1212,10 +1098,8 @@ public final class b extends FullCanvas
         }
         a6[0].c();
       }
-      if (i.c(11))
-      {
-        if (f)
-        {
+      if (i.c(11)) {
+        if (f) {
           cq += 1;
           b0 = 3;
           if (cq == 3)
@@ -1224,12 +1108,9 @@ public final class b extends FullCanvas
         }
         a6[0].d();
       }
-      if (i.c(12))
-      {
-        if (f)
-        {
-          switch (cq)
-          {
+      if (i.c(12)) {
+        if (f) {
+          switch (cq) {
           case 0:
             x -= 1;
             if (x < 0)
@@ -1250,12 +1131,9 @@ public final class b extends FullCanvas
         }
         a6[0].b(2);
       }
-      if (i.c(13))
-      {
-        if (f)
-        {
-          switch (cq)
-          {
+      if (i.c(13)) {
+        if (f) {
+          switch (cq) {
           case 0:
             x += 1;
             break;
@@ -1271,8 +1149,7 @@ public final class b extends FullCanvas
       }
       if (i.c(14))
         a6[0].a();
-      switch (i1)
-      {
+      switch (i1) {
       case 17:
         a6[0].b();
         break;
@@ -1286,35 +1163,28 @@ public final class b extends FullCanvas
     }
   }
 
-  public void f()
-  {
-    if (this.b2 == null)
-    {
+  public void f() {
+    if (this.b2 == null) {
       this.b2 = new Thread(this);
       this.b2.start();
     }
     b = false;
   }
 
-  public void keyPressed(int paramInt)
-  {
+  public void keyPressed(int paramInt) {
     i.a(paramInt);
   }
 
-  public void keyReleased(int paramInt)
-  {
+  public void keyReleased(int paramInt) {
     i.b(paramInt);
   }
 
-  public void a(Graphics paramGraphics)
-  {
-    if (a6[0].v == 0)
-    {
+  public void a(Graphics paramGraphics) {
+    if (a6[0].v == 0) {
       ai = a6[0].d - (r >> 1);
       aj = a6[0].e - (s >> 1);
     }
-    else
-    {
+    else {
       ai = (a6[0].w >> 6) - (r >> 1);
       aj = (a6[0].x >> 6) - (s >> 1);
     }
@@ -1325,8 +1195,7 @@ public final class b extends FullCanvas
     paramGraphics.fillRect(0, 0, r, i1);
     paramGraphics.translate(-ai, -aj);
     int i2 = 0;
-    while (i2 < 255)
-    {
+    while (i2 < 255) {
       paramGraphics.drawImage(ba, i2, i1, 20);
       paramGraphics.drawImage(bb, i2, 0, 20);
       i2 += 128;
@@ -1334,21 +1203,17 @@ public final class b extends FullCanvas
     int i3 = ay >> 6;
     paramGraphics.drawImage(a8[57], i3, az, 20);
     paramGraphics.drawImage(bd, i3 + cw, az + cx, 20);
-    if (e)
-    {
+    if (e) {
       ay += 16;
-      if (i3 > 255)
-      {
+      if (i3 > 255) {
         ay = -3200;
         az = c(104);
       }
     }
     int i4 = 2;
-    do
-    {
+    do {
       e locale1 = a6[i4];
-      if (locale1.ap)
-      {
+      if (locale1.ap) {
         if ((as == 0) && (i4 == 1))
           locale1.e();
         locale1.a(paramGraphics, (e) && ((as == 0) || (i4 == 0)));
@@ -1358,32 +1223,26 @@ public final class b extends FullCanvas
     while (i4 >= 0);
     paramGraphics.drawImage(a8[1], 109, 168, 20);
     int i6 = 2;
-    do
-    {
+    do {
       int i5 = 0;
       paramGraphics.drawImage(a9[0], aa[i6], ab[i6], 3);
-      if (as == 1)
-      {
+      if (as == 1) {
         if (((j.d) && (i6 < ap)) || ((!j.d) && (i6 >= ao)))
           i5 = 1;
       }
       else
         i5 = 1;
       if ((i5 != 0) && (e) && (c(3) == 0))
-        if (ae[i6] != 0)
-        {
+        if (ae[i6] != 0) {
           aa[i6] -= 2;
-          if (aa[i6] < -32)
-          {
+          if (aa[i6] < -32) {
             aa[i6] = 287;
             ab[i6] = c(104);
           }
         }
-        else
-        {
+        else {
           aa[i6] += 2;
-          if (aa[i6] > 287)
-          {
+          if (aa[i6] > 287) {
             aa[i6] = -32;
             ab[i6] = c(104);
           }
@@ -1392,16 +1251,14 @@ public final class b extends FullCanvas
     }
     while (i6 >= 0);
     int i7 = 50;
-    do
-    {
+    do {
       if (bu[i7].a != -1)
         bu[i7].a(paramGraphics);
       i7--;
     }
     while (i7 >= 0);
     paramGraphics.translate(ai, aj);
-    if (s < 208)
-    {
+    if (s < 208) {
       int i8 = r * r / 255;
       int i9 = ai * i8 / ak;
       paramGraphics.setColor(6684672);
@@ -1409,8 +1266,7 @@ public final class b extends FullCanvas
       paramGraphics.setColor(16711680);
       paramGraphics.fillRect(i9, s - 2, i8, 2);
     }
-    if ((a == 1) && ((as == 0) || (d)))
-    {
+    if ((a == 1) && ((as == 0) || (d))) {
       e locale2;
       if (as == 0)
         locale2 = bx;
@@ -1418,13 +1274,11 @@ public final class b extends FullCanvas
         locale2 = a6[1];
       int i10 = locale2.d;
       int i11 = locale2.e;
-      if (!a(i10 - 8, i11 - 8, 16, 16))
-      {
+      if (!a(i10 - 8, i11 - 8, 16, 16)) {
         e locale3 = locale2.ao;
         int i12 = b(locale3.d, locale3.e, i10, i11);
         int i13;
-        if ((i12 >= 45) && (i12 < 135))
-        {
+        if ((i12 >= 45) && (i12 < 135)) {
           i13 = i11 - aj;
           if (i13 < 4)
             i13 = 4;
@@ -1432,8 +1286,7 @@ public final class b extends FullCanvas
             i13 = s - 4;
           paramGraphics.drawImage(a8[63], r, i13, 10);
         }
-        else if ((i12 >= 135) && (i12 < 225))
-        {
+        else if ((i12 >= 135) && (i12 < 225)) {
           i13 = i10 - ai;
           if (i13 < 4)
             i13 = 4;
@@ -1441,8 +1294,7 @@ public final class b extends FullCanvas
             i13 = r - 4;
           paramGraphics.drawImage(a8[61], i13, s, 33);
         }
-        else if ((i12 >= 225) && (i12 < 315))
-        {
+        else if ((i12 >= 225) && (i12 < 315)) {
           i13 = i11 - aj;
           if (i13 < 4)
             i13 = 4;
@@ -1450,8 +1302,7 @@ public final class b extends FullCanvas
             i13 = s - 4;
           paramGraphics.drawImage(a8[62], 0, i13, 6);
         }
-        else if ((i12 > 315) || (i12 < 45))
-        {
+        else if ((i12 > 315) || (i12 < 45)) {
           i13 = i10 - ai;
           if (i13 < 4)
             i13 = 4;
@@ -1461,8 +1312,7 @@ public final class b extends FullCanvas
         }
       }
     }
-    if (aw > 0)
-    {
+    if (aw > 0) {
       if ((i) && ((as == 0) || (d)))
         if (ax == 3)
           paramGraphics.drawImage(bc, 2, 2, 20);
@@ -1472,24 +1322,19 @@ public final class b extends FullCanvas
       if (aw == 0)
         g();
     }
-    if (au > 0)
-    {
+    if (au > 0) {
       a(paramGraphics, bk[38], false);
       au -= 1;
     }
   }
 
-  public static boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
+  public static boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
     return (paramInt1 >= ai - paramInt3) && (paramInt1 <= ai + r) && (paramInt2 >= aj - paramInt4) && (paramInt2 <= aj + s);
   }
 
-  public static void g()
-  {
-    if ((as == 0) && (!j))
-    {
-      if (a6[0].m >= 10)
-      {
+  public static void g() {
+    if ((as == 0) && (!j)) {
+      if (a6[0].m >= 10) {
         by = a6[0];
         bz = a6[1];
         l = false;
@@ -1497,20 +1342,17 @@ public final class b extends FullCanvas
         int i1 = 0;
         n = by.at;
         a3 = a6[1].u;
-        if (bz.m < ad[a3])
-        {
+        if (bz.m < ad[a3]) {
           ad[a3] = bz.m;
           i1 = 1;
         }
-        if (by.af > ac[a3])
-        {
+        if (by.af > ac[a3]) {
           ac[a3] = by.af;
           m = true;
         }
         if (n)
           ag[a3] = true;
-        if ((a3 < 3) && (af[a3] == 0))
-        {
+        if ((a3 < 3) && (af[a3] == 0)) {
           j(a3);
           l = true;
         }
@@ -1521,8 +1363,7 @@ public final class b extends FullCanvas
         if (as == 1)
           bt = (byte)(bt + 128);
       }
-      else if (a6[1].m >= 10)
-      {
+      else if (a6[1].m >= 10) {
         g.a(0);
         a = 4;
         by = a6[1];
@@ -1530,15 +1371,13 @@ public final class b extends FullCanvas
       }
     }
     else if (as == 1)
-      if (a6[0].m >= 10)
-      {
+      if (a6[0].m >= 10) {
         by = a6[0];
         bz = a6[1];
         g.a(0);
         a = 4;
       }
-      else if (a6[1].m >= 10)
-      {
+      else if (a6[1].m >= 10) {
         bz = a6[0];
         by = a6[1];
         g.a(0);
@@ -1548,8 +1387,7 @@ public final class b extends FullCanvas
       a1 = Math.max(r, s) >> 1;
   }
 
-  public static void b(e parame)
-  {
+  public static void b(e parame) {
     aw = 45;
     if ((!i) || ((as == 1) && (!d)) || (parame.ae == -1))
       return;
@@ -1563,20 +1401,17 @@ public final class b extends FullCanvas
     bg.setColor(16777215);
     bg.fillRect(4, 2, t - 8 + 1, u - 4);
     Image localImage = a8[av];
-    if (ax == 3)
-    {
+    if (ax == 3) {
       bg.drawImage(localImage, 4, 4, 20);
       bm.a(bg, arrayOfString, 40, 4, 20);
     }
-    else
-    {
+    else {
       bg.drawImage(localImage, t - 4, 4, 24);
       bm.a(bg, arrayOfString, t - 8 - 32, 4, 24);
     }
   }
 
-  public static void b(Graphics paramGraphics)
-  {
+  public static void b(Graphics paramGraphics) {
     paramGraphics.setColor(52479);
     paramGraphics.fillRect(0, 0, r, s);
     bi.setColor(16751203);
@@ -1584,8 +1419,7 @@ public final class b extends FullCanvas
     bi.drawImage(a8[69], 0, 0, 20);
     bi.fillRect(11, 58, 77, 18);
     int i1 = 8;
-    for (int i2 = 0; i2 < 4; i2++)
-    {
+    for (int i2 = 0; i2 < 4; i2++) {
       bi.setColor(b4[i2]);
       bi.fillRect(4, i1, 96, 13);
       Image localImage = a8[(47 + i2)];
@@ -1608,8 +1442,7 @@ public final class b extends FullCanvas
     a(paramGraphics, bk[20], true);
   }
 
-  public static void c(Graphics paramGraphics)
-  {
+  public static void c(Graphics paramGraphics) {
     paramGraphics.setColor(52479);
     paramGraphics.fillRect(0, 0, r, s);
     bj.setColor(15466636);
@@ -1624,8 +1457,7 @@ public final class b extends FullCanvas
     if (at != 2)
       bj.fillRect(5, 80, 12, 10);
     String[] arrayOfString;
-    switch (at)
-    {
+    switch (at) {
     case 0:
       bj.drawImage(a7[17], 63, 39, 3);
       bm.a(bj, bk[22], 62, 14, 3);
@@ -1666,8 +1498,7 @@ public final class b extends FullCanvas
     paramGraphics.drawImage(bf, r >> 1, s >> 1, 3);
   }
 
-  public static void d(Graphics paramGraphics)
-  {
+  public static void d(Graphics paramGraphics) {
     paramGraphics.setColor(52479);
     paramGraphics.fillRect(0, 0, r, s);
     bi.setColor(b3[(a - 8)]);
@@ -1689,15 +1520,13 @@ public final class b extends FullCanvas
     a(paramGraphics, bk[7], false);
   }
 
-  public static void e(Graphics paramGraphics)
-  {
+  public static void e(Graphics paramGraphics) {
     int i1 = 124;
     paramGraphics.setColor(52479);
     paramGraphics.fillRect(0, 0, r, i1);
     paramGraphics.translate(-ce, 0);
     int i2 = 0;
-    while (i2 < 255 + ce)
-    {
+    while (i2 < 255 + ce) {
       paramGraphics.drawImage(ba, i2, i1, 20);
       paramGraphics.drawImage(bb, i2, 0, 20);
       i2 += 128;
@@ -1707,12 +1536,10 @@ public final class b extends FullCanvas
     if (ce > 128)
       ce = 0;
     int i3 = 3;
-    do
-    {
+    do {
       b5[i3] -= 1 + i3;
       paramGraphics.drawImage(a9[0], b5[i3], b6[i3], 3);
-      if (b5[i3] < -32)
-      {
+      if (b5[i3] < -32) {
         i4 = s / 3;
         b6[i3] = (i4 * i3 + c(i4));
         b5[i3] = (r + 32);
@@ -1752,8 +1579,7 @@ public final class b extends FullCanvas
       b7 += 50;
     if (cc > 70)
       b8 += 120;
-    if (cc > 100)
-    {
+    if (cc > 100) {
       if ((b9 >> 6 < (r >> 1) + (r >> 2)) || (cc > 300))
         b9 += 50;
       if (i5 > (r >> 1) + (r >> 2))
@@ -1763,8 +1589,7 @@ public final class b extends FullCanvas
       cb += 120;
   }
 
-  public static void a(e parame1, e parame2)
-  {
+  public static void a(e parame1, e parame2) {
     a = 6;
     a1 = 0;
     b8 = b.b9 = b.cb = b.ca = b.cc = b.cf = b.cg = 0;
@@ -1792,16 +1617,14 @@ public final class b extends FullCanvas
     bm.a(cn, bk[11] + by.an, cd >> 1, 7, 3);
     bm.a(co, bk[11] + bz.an, cd >> 1, 7, 3);
     int i1 = 3;
-    do
-    {
+    do {
       b5[i1] = c(r);
       int i2 = s / 3;
       b6[i1] = (i2 * i1 + c(i2));
       i1--;
     }
     while (i1 >= 0);
-    if (as == 1)
-    {
+    if (as == 1) {
       bq.a();
       bp = "";
       o = 0;
@@ -1810,8 +1633,7 @@ public final class b extends FullCanvas
     a(4, 0);
   }
 
-  public static void f(Graphics paramGraphics)
-  {
+  public static void f(Graphics paramGraphics) {
     int i1 = 5;
     int i2 = 130;
     int i3 = 40;
@@ -1825,14 +1647,12 @@ public final class b extends FullCanvas
     if (!j.d)
       str1 = "SLAVE";
     paramGraphics.drawString(str1, i1, i3 - i6, 20);
-    for (int i7 = 0; i7 < 3; i7++)
-    {
+    for (int i7 = 0; i7 < 3; i7++) {
       if (i7 == cq)
         paramGraphics.fillRect(i1 - 10, i3 + i7 * i4, 8, 10);
       paramGraphics.drawString(cp[i7], i1, i3 + i7 * i4, 20);
       String str2 = "";
-      switch (i7)
-      {
+      switch (i7) {
       case 0:
         str2 = Integer.toString(x);
         break;
@@ -1846,8 +1666,7 @@ public final class b extends FullCanvas
     }
   }
 
-  public static void c(e parame)
-  {
+  public static void c(e parame) {
     if (a == 4)
       return;
     int i1 = ct;
@@ -1867,8 +1686,7 @@ public final class b extends FullCanvas
     a0 = 30;
   }
 
-  public static void a(Graphics paramGraphics, String paramString, boolean paramBoolean)
-  {
+  public static void a(Graphics paramGraphics, String paramString, boolean paramBoolean) {
     int i1 = bm.a(paramString) + 4;
     int i2 = bm.a + 4;
     int i3 = 0;
@@ -1881,12 +1699,9 @@ public final class b extends FullCanvas
     bm.a(paramGraphics, paramString, i3 + 2, s - i2 + 2, 20);
   }
 
-  public void paint(Graphics paramGraphics)
-  {
-    try
-    {
-      if (cy >= 0)
-      {
+  public void paint(Graphics paramGraphics) {
+    try {
+      if (cy >= 0) {
         g(paramGraphics);
         String str1 = bk[6];
         if (c7)
@@ -1896,17 +1711,14 @@ public final class b extends FullCanvas
       }
       int i3;
       int i4;
-      switch (a)
-      {
+      switch (a) {
       case 14:
-        if (q == -1)
-        {
+        if (q == -1) {
           paramGraphics.setColor(39663);
           paramGraphics.fillRect(0, 0, r, s);
           bm.a(paramGraphics, bk[45], r >> 1, s >> 1, 3);
         }
-        else
-        {
+        else {
           ba = Image.createImage("/ad" + q + ".png");
           paramGraphics.drawImage(ba, 0, 0, 20);
         }
@@ -1942,8 +1754,7 @@ public final class b extends FullCanvas
       case 3:
         break;
       case 2:
-        if (!h)
-        {
+        if (!h) {
           e = false;
           a(paramGraphics);
           h = true;
@@ -1972,17 +1783,14 @@ public final class b extends FullCanvas
         i4 = s >> 1;
         paramGraphics.setClip(i3 - a1, i4 - a1, a1 << 1, a1 << 1);
         e(paramGraphics);
-        if (a == 6)
-        {
+        if (a == 6) {
           a1 += 8;
           if (a1 > r << 1)
             a = 5;
         }
-        else
-        {
+        else {
           a1 -= 8;
-          if (a1 < 0)
-          {
+          if (a1 < 0) {
             a();
             c();
           }
@@ -1992,8 +1800,7 @@ public final class b extends FullCanvas
         a(paramGraphics);
         if (f)
           f(paramGraphics);
-        if (a0 > 0)
-        {
+        if (a0 > 0) {
           a0 -= 1;
           String str2 = bw.m + " - " + bx.m;
           bm.a(paramGraphics, str2, r >> 1, s >> 1, 3);
@@ -2003,17 +1810,14 @@ public final class b extends FullCanvas
       if ((!d) && (a == 1))
         bm.a(paramGraphics, bp, r >> 1, 0, 17);
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
   }
 
-  public static void a(String paramString, int paramInt)
-  {
+  public static void a(String paramString, int paramInt) {
     cy = paramInt;
-    if (c2 == paramString)
-    {
+    if (c2 == paramString) {
       if (paramInt >= 0)
         cz = 0;
       else
@@ -2023,13 +1827,11 @@ public final class b extends FullCanvas
     }
     c2 = paramString;
     int i1 = bm.a(paramString);
-    if (i1 > 94)
-    {
+    if (i1 > 94) {
       a(paramString, 94, 58);
       c0 = 100;
     }
-    else
-    {
+    else {
       c0 = i1 + 4 + 2;
       a(paramString, i1, 58);
     }
@@ -2037,10 +1839,8 @@ public final class b extends FullCanvas
     cz = 2;
   }
 
-  public static void g(Graphics paramGraphics)
-  {
-    if (cz > -1)
-    {
+  public static void g(Graphics paramGraphics) {
+    if (cz > -1) {
       int i1 = h() != 0 ? 1 : 0;
       int i2 = c0;
       int i3 = c1;
@@ -2065,8 +1865,7 @@ public final class b extends FullCanvas
       paramGraphics.drawRect(i4, i5, i7 - i4, i8);
       if (i1 != 0)
         paramGraphics.drawRect(i7, i5, 8, i8);
-      if (cz == 0)
-      {
+      if (cz == 0) {
         i4 += 2;
         i5 += 2;
         a(paramGraphics, i4, i5);
@@ -2081,11 +1880,9 @@ public final class b extends FullCanvas
     }
   }
 
-  public void showNotify()
-  {
+  public void showNotify() {
     i.b();
-    if (a == 1)
-    {
+    if (a == 1) {
       g.a(30);
       a = 2;
       h = false;
@@ -2094,8 +1891,7 @@ public final class b extends FullCanvas
     g.h = 2;
   }
 
-  public static void a(String paramString, int paramInt1, int paramInt2)
-  {
+  public static void a(String paramString, int paramInt1, int paramInt2) {
     c8 = 0;
     c3 = paramInt1;
     c4 = paramInt2;
@@ -2109,49 +1905,41 @@ public final class b extends FullCanvas
     int i6 = 0;
     int i7 = 0;
     int i8 = 0;
-    while (i7 == 0)
-    {
+    while (i7 == 0) {
       c10 = arrayOfChar[i2];
-      if (c10 == ' ')
-      {
+      if (c10 == ' ') {
         i5 += bm.b;
         i3 = i2;
         i6 = 0;
       }
-      else if (c10 == '\n')
-      {
+      else if (c10 == '\n') {
         i8 = 1;
         i3 = i2;
         i6 = 0;
       }
-      else
-      {
+      else {
         i9 = bm.a(c10) + 0;
         i6 += i9;
         i5 += i9;
         if (i5 > paramInt1)
           i8 = 1;
       }
-      if (i2 == arrayOfChar.length - 1)
-      {
+      if (i2 == arrayOfChar.length - 1) {
         i3 = i2 + 1;
         i8 = 1;
         i7 = 1;
         if (i4 > i2);
       }
-      else if (i8 != 0)
-      {
+      else if (i8 != 0) {
         i9 = i3 <= i4 ? 1 : 0;
         if (i9 != 0)
           i3 = i2;
         dd[db] = new String(arrayOfChar, i4, i3 - i4);
-        if (i9 != 0)
-        {
+        if (i9 != 0) {
           i4 = i3;
           i5 = 0;
         }
-        else
-        {
+        else {
           i4 = i3 + 1;
           i5 = i6;
         }
@@ -2166,8 +1954,7 @@ public final class b extends FullCanvas
     c5 = 0;
     int i10 = 0;
     int i11 = 0;
-    while (i10 < db)
-    {
+    while (i10 < db) {
       String str = dd[i10];
       int i12 = 0;
       i12 = bm.a + 1;
@@ -2176,8 +1963,7 @@ public final class b extends FullCanvas
       i11 += i12;
       if (((i9 != 0) || (i10 == db - 1)) && (i11 > c5))
         c5 = i11;
-      if (i9 != 0)
-      {
+      if (i9 != 0) {
         c9[(c10++)] = i10;
         i11 = i12;
         i9 = 0;
@@ -2192,22 +1978,18 @@ public final class b extends FullCanvas
     c7 = da == 0;
   }
 
-  public static void a(Graphics paramGraphics, int paramInt1, int paramInt2)
-  {
+  public static void a(Graphics paramGraphics, int paramInt1, int paramInt2) {
     c6 = true;
     int i1 = 0;
     int i2 = 0;
-    while (true)
-    {
-      if (i1 == c9[i2])
-      {
+    while (true) {
+      if (i1 == c9[i2]) {
         i2++;
         if (i2 > c8)
           break;
       }
       String str = dd[i1];
-      if (i2 == c8)
-      {
+      if (i2 == c8) {
         bm.a(paramGraphics, str, paramInt1, paramInt2, 20);
         paramInt2 += bm.a + 1;
       }
@@ -2215,24 +1997,20 @@ public final class b extends FullCanvas
     }
   }
 
-  public static void b(int paramInt)
-  {
-    if (paramInt == 2)
-    {
+  public static void b(int paramInt) {
+    if (paramInt == 2) {
       if (c8 < da)
         c8 += 1;
       if (c8 == da)
         c7 = true;
     }
-    else if ((paramInt == 1) && (c8 > 0))
-    {
+    else if ((paramInt == 1) && (c8 > 0)) {
       c8 -= 1;
     }
     c6 = false;
   }
 
-  public static int h()
-  {
+  public static int h() {
     int i1 = 0;
     if (c8 > 0)
       i1 |= 1;
@@ -2241,14 +2019,12 @@ public final class b extends FullCanvas
     return i1;
   }
 
-  public static int c(int paramInt)
-  {
+  public static int c(int paramInt) {
     return Math.abs(w.nextInt() % paramInt);
   }
 
   public static void i()
-    throws IOException
-  {
+    throws IOException {
     a5.readFully(de);
     a5.readFully(dh);
     a5.readFully(di);
@@ -2258,8 +2034,7 @@ public final class b extends FullCanvas
   }
 
   public static byte[] j()
-    throws IOException
-  {
+    throws IOException {
     int i1 = a5.readShort() & 0xFFFF;
     byte[] arrayOfByte1 = new byte[i1];
     a5.readFully(arrayOfByte1);
@@ -2294,8 +2069,7 @@ public final class b extends FullCanvas
   }
 
   public static Image[] d(int paramInt)
-    throws IOException
-  {
+    throws IOException {
     Image[] arrayOfImage = new Image[paramInt];
     for (int i1 = 0; i1 < paramInt; i1++)
       arrayOfImage[i1] = k();
@@ -2303,30 +2077,25 @@ public final class b extends FullCanvas
   }
 
   public static Image k()
-    throws IOException
-  {
+    throws IOException {
     byte[] arrayOfByte = j();
     Image localImage = Image.createImage(arrayOfByte, 0, arrayOfByte.length);
     return localImage;
   }
 
   public static Image[] e(int paramInt)
-    throws IOException
-  {
+    throws IOException {
     Image[] arrayOfImage = new Image[paramInt];
     for (int i1 = 0; i1 < paramInt; i1++)
       arrayOfImage[i1] = l();
     return arrayOfImage;
   }
 
-  public static void a(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
+  public static void a(byte[] paramArrayOfByte, int paramInt1, int paramInt2) {
     long l1 = 4294967295L;
-    if (!dk)
-    {
+    if (!dk) {
       int i2 = 256;
-      do
-      {
+      do {
         long l2 = i2;
         for (int i3 = 0; i3 < 8; i3++)
           if ((l2 & 1L) != 0L)
@@ -2350,8 +2119,7 @@ public final class b extends FullCanvas
   }
 
   public static String[] b(String paramString)
-    throws IOException
-  {
+    throws IOException {
     DataInputStream localDataInputStream = new DataInputStream(paramString.getClass().getResourceAsStream(paramString));
     int i1 = localDataInputStream.readInt();
     String[] arrayOfString = new String[i1];
@@ -2360,54 +2128,44 @@ public final class b extends FullCanvas
     return arrayOfString;
   }
 
-  public static Image l()
-  {
-    try
-    {
+  public static Image l() {
+    try {
       int i1 = a5.readInt();
       byte[] arrayOfByte = new byte[i1];
       a5.readFully(arrayOfByte);
       return Image.createImage(arrayOfByte, 0, i1);
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
     return null;
   }
 
-  public static byte[] m()
-  {
-    try
-    {
+  public static byte[] m() {
+    try {
       int i1 = a5.readInt();
       byte[] arrayOfByte = new byte[i1];
       a5.readFully(arrayOfByte);
       return arrayOfByte;
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       localException.printStackTrace();
     }
     return null;
   }
 
-  public static int f(int paramInt)
-  {
-    try
-    {
+  public static int f(int paramInt) {
+    try {
       paramInt = g(paramInt + 90);
       return h(paramInt);
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       System.out.println("cos: " + localException);
     }
     return 0;
   }
 
-  public static int g(int paramInt)
-  {
+  public static int g(int paramInt) {
     if (paramInt < 0)
       return 360 + paramInt;
     if (paramInt > 359)
@@ -2415,10 +2173,8 @@ public final class b extends FullCanvas
     return paramInt;
   }
 
-  public static int h(int paramInt)
-  {
-    try
-    {
+  public static int h(int paramInt) {
+    try {
       if (paramInt < 90)
         return dl[paramInt];
       if (paramInt == 90)
@@ -2435,15 +2191,13 @@ public final class b extends FullCanvas
         return -dl[(360 - paramInt)];
       return 1;
     }
-    catch (Exception localException)
-    {
+    catch (Exception localException) {
       System.out.println("sin: " + localException);
     }
     return 1;
   }
 
-  public static int b(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
+  public static int b(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
     int i1 = 1;
     int i2 = 1;
     int i3 = paramInt1 - paramInt3;
@@ -2472,12 +2226,10 @@ public final class b extends FullCanvas
     return -1;
   }
 
-  public static int b(int paramInt1, int paramInt2)
-  {
+  public static int b(int paramInt1, int paramInt2) {
     if (Math.abs(paramInt1 - paramInt2) <= e.a0)
       return 0;
-    if (paramInt2 >= paramInt1)
-    {
+    if (paramInt2 >= paramInt1) {
       i1 = paramInt2 - paramInt1;
       i2 = 360 - paramInt2 + paramInt1;
       if (i1 <= i2)
@@ -2491,12 +2243,10 @@ public final class b extends FullCanvas
     return 3;
   }
 
-  public void a(String paramString1, String paramString2)
-  {
+  public void a(String paramString1, String paramString2) {
   }
 
-  public static void i(int paramInt)
-  {
+  public static void i(int paramInt) {
     du = dx[paramInt].length();
     dv = 0;
     d6 = true;
