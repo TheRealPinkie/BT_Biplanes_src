@@ -18,4 +18,4 @@
 * f — main font (f.png — parsed)
 * fzb, fzr — in-game digits fonts (fzb.png, fzr.png — parsed)
 * r — some resourses (likely audio)
-* tg, tm, tt — strings
+* tg, tm, tt — strings (tg.txt, tm.txt, tt.txt — parsed)

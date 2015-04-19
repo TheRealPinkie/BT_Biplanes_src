@@ -1,0 +1,46 @@
+-
+Back
+Send
+Your friend 
+would like you to play a fantastic multiplayer game on your phone. Get Bluetooth Biplanes from www.morpheme.co.uk
+????
+Next
+Close
+In order to unlock this pilot, you must first defeat the next opponent.
+Congratulations! You Win! 
+You lose!
+Shot Accuracy 
+Gah!
+Curse You!
+Greetings!
+You beat the previous best shot accuracy against this enemy pilot!
+Your plane didn't receive a scratch - you win the Perfect Medal against this enemy pilot
+You've unlocked new pilots!
+It looks like you're having problems with your Bluetooth connection. The other player may have interrupted their game. If not, ensure both phones have bluetooth switched on, are within 10 metres of one another, and are not obstructed by too many walls or obstacles. You can bring up the menu to quit this game and try to connect again.
+YOUR RECORDS
+Help
+This screen displays how well you have performed against the various computer opponents. You can see the best shot accuracy you have achieved against each, and any 'perfect performance' medals you have received. Keep playing to get the best accuracy you can, and beat your opponent without taking any hits at all, for a medal!
+Accelerate
+Deccelerate
+Turn Clockwise
+Turn Anti Clockwise
+Fire
+Eject
+Move Left
+Move Right
+Open Parachute
+Run into the barn!
+'Bluetooth Biplanes'
+© Morpheme Ltd. 2004
+All Rights Reserved
+www.morpheme.co.uk
+"When connecting via Bluetooth, one player will start the game. This player will then wait for another player to join. When this is initiated, the phone will ask you to confirm whether you wish to allow connectivity. You must answer 'yes' for the game to work. If you find you are unable to join a game, try hosting instead and vise versa For further information visit the forums at www.morpheme.co.uk. You must ensure that you have switched Bluetooth On in your phone's Connectivity Settings to play two player.
+You have already played one bluetooth game. Your phone is now paired with the person you played, and you will be only able to play against them until you shut down the game and restart it.
+Menu
+Select
+Waiting for other player
+Connected!
+Searching for games..
+No games found.
+Connection failed.
+Also from Morpheme...

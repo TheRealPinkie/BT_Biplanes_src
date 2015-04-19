@@ -1,0 +1,48 @@
+BLUETOOTH BIPLANES
+One Player VS Computer
+CHOOSE PLAYER
+Victoria
+Windy
+Arthur
+Balloon-Headed Boy
+Two Player Game
+Start Bluetooth Game
+Join Bluetooth Game
+Help
+Your Records
+Options
+Display Taunts
+On
+Off
+Sound
+On
+Off
+Back
+Help
+Quit
+Are You Sure?
+Yes
+No
+CHOOSE OPPONENT
+Arno (Easy)
+Hans (Medium)
+FiFi (Hard)
+STINKOR (Expert)
+GAME PAUSED
+On With the Show!
+Bail Out!
+Game Mode
+Compete (First to 10)
+Practice (Indefinitely)
+CHOOSE PLAYER
+Arno
+Hans
+Fifi
+STINKOR
+CHOOSE PLAYER
+Victoria
+Windy
+Arthur
+Balloon-Headed Boy
+ALREADY CONNECTED
+Play Bluetooth Game
