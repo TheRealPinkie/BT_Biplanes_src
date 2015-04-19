@@ -525,7 +525,7 @@ public final class b extends FullCanvas
     public static boolean b() {
         try {
             System.gc();
-            RecordStore localRecordStore = RecordStore.openRecordStore("screen_height", true);
+            RecordStore localRecordStore = RecordStore.openRecordStore("s", true);
             if (localRecordStore.getNumRecords() > 0) {
                 byte[] arrayOfByte = localRecordStore.getRecord(1);
                 ByteArrayInputStream localByteArrayInputStream = new ByteArrayInputStream(arrayOfByte);
