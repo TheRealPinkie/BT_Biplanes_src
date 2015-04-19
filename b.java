@@ -33,8 +33,8 @@ public final class b extends FullCanvas
     public static int o;
     public static int p;
     public static int q;
-    public static int r;
-    public static int s;
+    public static int screen_width;
+    public static int screen_height;
     public static int t;
     public static int u;
     public static final int[] v = { 239, 16 };
@@ -188,15 +188,15 @@ public final class b extends FullCanvas
 
     public b(BluetoothBiplanes paramBluetoothBiplanes) {
         bv = paramBluetoothBiplanes;
-        r = getWidth();
-        s = getHeight();
-        if (r == 128)
+        screen_width = getWidth();
+        screen_height = getHeight();
+        if (screen_width == 128)
             x = 50;
         else
             x = 25;
         dn = 5;
         jdField_do = dn + 3;
-        dt = r - 3;
+        dt = screen_width - 3;
         ds = dt - 2;
         dq = ds - 6;
         dp = ds - 8;
@@ -206,7 +206,7 @@ public final class b extends FullCanvas
         d7 = 500;
         dz = new int[] { 2, 11 };
         d0 = new int[] { 10, 11 };
-        d1 = new int[] { s - 48, s - 28 };
+        d1 = new int[] { screen_height - 48, screen_height - 28 };
         d2 = new int[] { 1, 0 };
         dx = new StringBuffer[2];
         dy = new int[2];
@@ -419,8 +419,8 @@ public final class b extends FullCanvas
             cn = cl.getGraphics();
             co = cm.getGraphics();
             n();
-            ak = 255 - r;
-            al = 208 - s;
+            ak = 255 - screen_width;
+            al = 208 - screen_height;
             bu = new d[50];
             int i2 = 50;
             do {
@@ -525,7 +525,7 @@ public final class b extends FullCanvas
     public static boolean b() {
         try {
             System.gc();
-            RecordStore localRecordStore = RecordStore.openRecordStore("s", true);
+            RecordStore localRecordStore = RecordStore.openRecordStore("screen_height", true);
             if (localRecordStore.getNumRecords() > 0) {
                 byte[] arrayOfByte = localRecordStore.getRecord(1);
                 ByteArrayInputStream localByteArrayInputStream = new ByteArrayInputStream(arrayOfByte);
@@ -972,7 +972,7 @@ public final class b extends FullCanvas
         case 5:
             if (i1 != -66) {
                 a = 7;
-                a1 = Math.max(r, s) >> 1;
+                a1 = Math.max(screen_width, screen_height) >> 1;
             }
             break;
         case 3:
@@ -1181,18 +1181,18 @@ public final class b extends FullCanvas
 
     public void a(Graphics paramGraphics) {
         if (a6[0].v == 0) {
-            ai = a6[0].d - (r >> 1);
-            aj = a6[0].e - (s >> 1);
+            ai = a6[0].d - (screen_width >> 1);
+            aj = a6[0].e - (screen_height >> 1);
         }
         else {
-            ai = (a6[0].w >> 6) - (r >> 1);
-            aj = (a6[0].x >> 6) - (s >> 1);
+            ai = (a6[0].w >> 6) - (screen_width >> 1);
+            aj = (a6[0].x >> 6) - (screen_height >> 1);
         }
         ai = ai > ak ? ak : ai < 0 ? 0 : ai;
         aj = aj > al ? al : aj < 0 ? 0 : aj;
         int i1 = 124;
         paramGraphics.setColor(52479);
-        paramGraphics.fillRect(0, 0, r, i1);
+        paramGraphics.fillRect(0, 0, screen_width, i1);
         paramGraphics.translate(-ai, -aj);
         int i2 = 0;
         while (i2 < 255) {
@@ -1258,13 +1258,13 @@ public final class b extends FullCanvas
         }
         while (i7 >= 0);
         paramGraphics.translate(ai, aj);
-        if (s < 208) {
-            int i8 = r * r / 255;
+        if (screen_height < 208) {
+            int i8 = screen_width * screen_width / 255;
             int i9 = ai * i8 / ak;
             paramGraphics.setColor(6684672);
-            paramGraphics.fillRect(0, s - 2, r, 2);
+            paramGraphics.fillRect(0, screen_height - 2, screen_width, 2);
             paramGraphics.setColor(16711680);
-            paramGraphics.fillRect(i9, s - 2, i8, 2);
+            paramGraphics.fillRect(i9, screen_height - 2, i8, 2);
         }
         if ((a == 1) && ((as == 0) || (d))) {
             e locale2;
@@ -1282,32 +1282,32 @@ public final class b extends FullCanvas
                     i13 = i11 - aj;
                     if (i13 < 4)
                         i13 = 4;
-                    else if (i13 > s - 4)
-                        i13 = s - 4;
-                    paramGraphics.drawImage(a8[63], r, i13, 10);
+                    else if (i13 > screen_height - 4)
+                        i13 = screen_height - 4;
+                    paramGraphics.drawImage(a8[63], screen_width, i13, 10);
                 }
                 else if ((i12 >= 135) && (i12 < 225)) {
                     i13 = i10 - ai;
                     if (i13 < 4)
                         i13 = 4;
-                    else if (i13 > r - 4)
-                        i13 = r - 4;
-                    paramGraphics.drawImage(a8[61], i13, s, 33);
+                    else if (i13 > screen_width - 4)
+                        i13 = screen_width - 4;
+                    paramGraphics.drawImage(a8[61], i13, screen_height, 33);
                 }
                 else if ((i12 >= 225) && (i12 < 315)) {
                     i13 = i11 - aj;
                     if (i13 < 4)
                         i13 = 4;
-                    else if (i13 > s - 4)
-                        i13 = s - 4;
+                    else if (i13 > screen_height - 4)
+                        i13 = screen_height - 4;
                     paramGraphics.drawImage(a8[62], 0, i13, 6);
                 }
                 else if ((i12 > 315) || (i12 < 45)) {
                     i13 = i10 - ai;
                     if (i13 < 4)
                         i13 = 4;
-                    else if (i13 > r - 4)
-                        i13 = r - 4;
+                    else if (i13 > screen_width - 4)
+                        i13 = screen_width - 4;
                     paramGraphics.drawImage(a8[60], i13, 0, 17);
                 }
             }
@@ -1317,7 +1317,7 @@ public final class b extends FullCanvas
                 if (ax == 3)
                     paramGraphics.drawImage(bc, 2, 2, 20);
                 else
-                    paramGraphics.drawImage(bc, r - 2, 2, 24);
+                    paramGraphics.drawImage(bc, screen_width - 2, 2, 24);
             aw -= 1;
             if (aw == 0)
                 g();
@@ -1329,7 +1329,7 @@ public final class b extends FullCanvas
     }
 
     public static boolean a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
-        return (paramInt1 >= ai - paramInt3) && (paramInt1 <= ai + r) && (paramInt2 >= aj - paramInt4) && (paramInt2 <= aj + s);
+        return (paramInt1 >= ai - paramInt3) && (paramInt1 <= ai + screen_width) && (paramInt2 >= aj - paramInt4) && (paramInt2 <= aj + screen_height);
     }
 
     public static void g() {
@@ -1384,7 +1384,7 @@ public final class b extends FullCanvas
                 a = 4;
             }
         if (a == 4)
-            a1 = Math.max(r, s) >> 1;
+            a1 = Math.max(screen_width, screen_height) >> 1;
     }
 
     public static void b(e parame) {
@@ -1413,7 +1413,7 @@ public final class b extends FullCanvas
 
     public static void b(Graphics paramGraphics) {
         paramGraphics.setColor(52479);
-        paramGraphics.fillRect(0, 0, r, s);
+        paramGraphics.fillRect(0, 0, screen_width, screen_height);
         bi.setColor(16751203);
         bi.fillRect(2, 2, 103, 78);
         bi.drawImage(a8[69], 0, 0, 20);
@@ -1434,8 +1434,8 @@ public final class b extends FullCanvas
             i1 += 17;
         }
         bi.drawImage(a8[70], 50, 8, 20);
-        int i3 = r >> 1;
-        int i4 = s >> 1;
+        int i3 = screen_width >> 1;
+        int i4 = screen_height >> 1;
         paramGraphics.drawImage(be, i3, i4, 3);
         bm.a(paramGraphics, bk[19], i3 - (be.getWidth() >> 1) + 8, i4 - (be.getHeight() >> 1) - 4, 20);
         a(paramGraphics, bk[7], false);
@@ -1444,7 +1444,7 @@ public final class b extends FullCanvas
 
     public static void c(Graphics paramGraphics) {
         paramGraphics.setColor(52479);
-        paramGraphics.fillRect(0, 0, r, s);
+        paramGraphics.fillRect(0, 0, screen_width, screen_height);
         bj.setColor(15466636);
         bj.fillRect(0, 0, 128, 100);
         bj.setColor(16751203);
@@ -1495,12 +1495,12 @@ public final class b extends FullCanvas
         }
         a(paramGraphics, bk[7], false);
         a(paramGraphics, bk[6], true);
-        paramGraphics.drawImage(bf, r >> 1, s >> 1, 3);
+        paramGraphics.drawImage(bf, screen_width >> 1, screen_height >> 1, 3);
     }
 
     public static void d(Graphics paramGraphics) {
         paramGraphics.setColor(52479);
-        paramGraphics.fillRect(0, 0, r, s);
+        paramGraphics.fillRect(0, 0, screen_width, screen_height);
         bi.setColor(b3[(a - 8)]);
         bi.fillRect(2, 2, 103, 78);
         bi.drawImage(a8[69], 0, 0, 20);
@@ -1516,14 +1516,14 @@ public final class b extends FullCanvas
         bm.a(bi, arrayOfString, 25, 6, 20);
         if (a == 9)
             bi.drawImage(a8[68], 6, 23, 20);
-        paramGraphics.drawImage(be, r >> 1, s >> 1, 3);
+        paramGraphics.drawImage(be, screen_width >> 1, screen_height >> 1, 3);
         a(paramGraphics, bk[7], false);
     }
 
     public static void e(Graphics paramGraphics) {
         int i1 = 124;
         paramGraphics.setColor(52479);
-        paramGraphics.fillRect(0, 0, r, i1);
+        paramGraphics.fillRect(0, 0, screen_width, i1);
         paramGraphics.translate(-ce, 0);
         int i2 = 0;
         while (i2 < 255 + ce) {
@@ -1540,9 +1540,9 @@ public final class b extends FullCanvas
             b5[i3] -= 1 + i3;
             paramGraphics.drawImage(a9[0], b5[i3], b6[i3], 3);
             if (b5[i3] < -32) {
-                i4 = s / 3;
+                i4 = screen_height / 3;
                 b6[i3] = (i4 * i3 + c(i4));
-                b5[i3] = (r + 32);
+                b5[i3] = (screen_width + 32);
             }
             i3--;
         }
@@ -1560,13 +1560,13 @@ public final class b extends FullCanvas
         paramGraphics.drawImage(a8[(14 + c(3))], i5 - 56, 75 + i9, 3);
         paramGraphics.drawImage(a8[(14 + c(3))], i5 - 14, 85 + i9, 3);
         paramGraphics.drawImage(a8[(14 + c(3))], i5 - 38, 93 + i9, 3);
-        if (cf - 32 - (cd >> 1) < r >> 1)
+        if (cf - 32 - (cd >> 1) < screen_width >> 1)
             cf = i6;
         paramGraphics.drawImage(a8[65], cf - 24, 50, 10);
         paramGraphics.drawImage(cl, cf - 32, 50, 10);
         paramGraphics.drawImage(a8[66], cf - 32 - cd, 50, 10);
         paramGraphics.drawImage(ch, i6, 50, 10);
-        if (cg - 32 - (cd >> 1) < r >> 1)
+        if (cg - 32 - (cd >> 1) < screen_width >> 1)
             cg = i7;
         paramGraphics.drawImage(a8[65], cg - 24, 110, 10);
         paramGraphics.drawImage(cm, cg - 32, 110, 10);
@@ -1575,14 +1575,14 @@ public final class b extends FullCanvas
         cc += 1;
         if (cc > 350)
             a = 7;
-        if ((cc > 0) && ((b7 >> 6 < (r >> 1) + (r >> 2)) || (cc > 300)))
+        if ((cc > 0) && ((b7 >> 6 < (screen_width >> 1) + (screen_width >> 2)) || (cc > 300)))
             b7 += 50;
         if (cc > 70)
             b8 += 120;
         if (cc > 100) {
-            if ((b9 >> 6 < (r >> 1) + (r >> 2)) || (cc > 300))
+            if ((b9 >> 6 < (screen_width >> 1) + (screen_width >> 2)) || (cc > 300))
                 b9 += 50;
-            if (i5 > (r >> 1) + (r >> 2))
+            if (i5 > (screen_width >> 1) + (screen_width >> 2))
                 ca += 60;
         }
         if (cc > 170)
@@ -1618,8 +1618,8 @@ public final class b extends FullCanvas
         bm.a(co, bk[11] + bz.an, cd >> 1, 7, 3);
         int i1 = 3;
         do {
-            b5[i1] = c(r);
-            int i2 = s / 3;
+            b5[i1] = c(screen_width);
+            int i2 = screen_height / 3;
             b6[i1] = (i2 * i1 + c(i2));
             i1--;
         }
@@ -1641,7 +1641,7 @@ public final class b extends FullCanvas
         int i5 = 10;
         int i6 = 20;
         paramGraphics.setColor(3355545);
-        paramGraphics.fillRect(i1 - i5, i3 - i5 - i6, r - (i1 << 1) + (i5 << 1), i4 * 3 + (i5 << 1) + i6);
+        paramGraphics.fillRect(i1 - i5, i3 - i5 - i6, screen_width - (i1 << 1) + (i5 << 1), i4 * 3 + (i5 << 1) + i6);
         paramGraphics.setColor(16777215);
         String str1 = "MASTER";
         if (!j.d)
@@ -1691,12 +1691,12 @@ public final class b extends FullCanvas
         int i2 = bm.a + 4;
         int i3 = 0;
         if (!paramBoolean)
-            i3 = r - i1;
+            i3 = screen_width - i1;
         paramGraphics.setColor(6488245);
-        paramGraphics.fillRect(i3, s - i2, i1, i2);
+        paramGraphics.fillRect(i3, screen_height - i2, i1, i2);
         paramGraphics.setColor(16776960);
-        paramGraphics.fillRect(i3 + 1, s - i2 + 1, i1 - 2, i2 - 2);
-        bm.a(paramGraphics, paramString, i3 + 2, s - i2 + 2, 20);
+        paramGraphics.fillRect(i3 + 1, screen_height - i2 + 1, i1 - 2, i2 - 2);
+        bm.a(paramGraphics, paramString, i3 + 2, screen_height - i2 + 2, 20);
     }
 
     public void paint(Graphics paramGraphics) {
@@ -1715,8 +1715,8 @@ public final class b extends FullCanvas
             case 14:
                 if (q == -1) {
                     paramGraphics.setColor(39663);
-                    paramGraphics.fillRect(0, 0, r, s);
-                    bm.a(paramGraphics, bk[45], r >> 1, s >> 1, 3);
+                    paramGraphics.fillRect(0, 0, screen_width, screen_height);
+                    bm.a(paramGraphics, bk[45], screen_width >> 1, screen_height >> 1, 3);
                 }
                 else {
                     ba = Image.createImage("/ad" + q + ".png");
@@ -1725,14 +1725,14 @@ public final class b extends FullCanvas
                 break;
             case 13:
                 int i1 = bm.a + 2;
-                int i2 = s - (i1 << 2) >> 1;
+                int i2 = screen_height - (i1 << 2) >> 1;
                 paramGraphics.setColor(39663);
-                paramGraphics.fillRect(0, 0, r, s);
-                bm.a(paramGraphics, bk[32], r >> 1, i2, 17);
-                bm.a(paramGraphics, bk[33], r >> 1, i2 + i1, 17);
-                bm.a(paramGraphics, bk[34], r >> 1, i2 + (i1 << 1), 17);
-                bm.a(paramGraphics, bk[35], r >> 1, i2 + i1 * 3, 17);
-                paramGraphics.drawImage(a7[1], r - 4, s + 2, 40);
+                paramGraphics.fillRect(0, 0, screen_width, screen_height);
+                bm.a(paramGraphics, bk[32], screen_width >> 1, i2, 17);
+                bm.a(paramGraphics, bk[33], screen_width >> 1, i2 + i1, 17);
+                bm.a(paramGraphics, bk[34], screen_width >> 1, i2 + (i1 << 1), 17);
+                bm.a(paramGraphics, bk[35], screen_width >> 1, i2 + i1 * 3, 17);
+                paramGraphics.drawImage(a7[1], screen_width - 4, screen_height + 2, 40);
                 break;
             case 12:
                 c(paramGraphics);
@@ -1759,14 +1759,14 @@ public final class b extends FullCanvas
                     a(paramGraphics);
                     h = true;
                 }
-                g.a(paramGraphics, r, s, r, 1, 2, 4, (g.a == 14) || (g.a == 60) || (g.a == 92) || (g.a == 82) ? 16 : bm.a + 4, bm);
+                g.a(paramGraphics, screen_width, screen_height, screen_width, 1, 2, 4, (g.a == 14) || (g.a == 60) || (g.a == 92) || (g.a == 82) ? 16 : bm.a + 4, bm);
                 if ((g.a != 66) && (g.a != 50))
                     a(paramGraphics, bk[1], false);
                 a(paramGraphics, bk[39], true);
                 break;
             case 4:
                 paramGraphics.setColor(0);
-                paramGraphics.fillRect(0, 0, r, s);
+                paramGraphics.fillRect(0, 0, screen_width, screen_height);
                 i3 = bw.d - ai;
                 i4 = bw.e - aj;
                 paramGraphics.setClip(i3 - a1, i4 - a1, a1 << 1, a1 << 1);
@@ -1778,14 +1778,14 @@ public final class b extends FullCanvas
             case 6:
             case 7:
                 paramGraphics.setColor(0);
-                paramGraphics.fillRect(0, 0, r, s);
-                i3 = r >> 1;
-                i4 = s >> 1;
+                paramGraphics.fillRect(0, 0, screen_width, screen_height);
+                i3 = screen_width >> 1;
+                i4 = screen_height >> 1;
                 paramGraphics.setClip(i3 - a1, i4 - a1, a1 << 1, a1 << 1);
                 e(paramGraphics);
                 if (a == 6) {
                     a1 += 8;
-                    if (a1 > r << 1)
+                    if (a1 > screen_width << 1)
                         a = 5;
                 }
                 else {
@@ -1803,12 +1803,12 @@ public final class b extends FullCanvas
                 if (a0 > 0) {
                     a0 -= 1;
                     String str2 = bw.m + " - " + bx.m;
-                    bm.a(paramGraphics, str2, r >> 1, s >> 1, 3);
+                    bm.a(paramGraphics, str2, screen_width >> 1, screen_height >> 1, 3);
                 }
                 break;
             }
             if ((!d) && (a == 1))
-                bm.a(paramGraphics, bp, r >> 1, 0, 17);
+                bm.a(paramGraphics, bp, screen_width >> 1, 0, 17);
         }
         catch (Exception localException) {
             localException.printStackTrace();
@@ -1846,12 +1846,12 @@ public final class b extends FullCanvas
             int i3 = c1;
             i2 >>= cz;
             i3 >>= cz;
-            int i4 = r - i2 >> 1;
+            int i4 = screen_width - i2 >> 1;
             int i5;
             if (al - aj < c1)
-                i5 = (s >> 1) - i3 + bm.a + 8;
+                i5 = (screen_height >> 1) - i3 + bm.a + 8;
             else
-                i5 = s - i3 - bm.a - 8;
+                i5 = screen_height - i3 - bm.a - 8;
             paramGraphics.setColor(6724044);
             int i6 = i2;
             if (i1 != 0)
