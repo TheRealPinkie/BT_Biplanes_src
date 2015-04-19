@@ -451,11 +451,11 @@ public final class b extends FullCanvas
             a6[0].ao = a6[1];
             a6[1].ao = a6[0];
             a5 = new DataInputStream(a6.getClass().getResourceAsStream("/r"));
-            byte[] arrayOfByte1 = m();
+            byte[] arrayOfByte1 = readBytesArrayFromR();
             x = arrayOfByte1[0];
             z = arrayOfByte1[1];
-            bs = m();
-            byte[] arrayOfByte2 = m();
+            bs = readBytesArrayFromR();
+            byte[] arrayOfByte2 = readBytesArrayFromR();
             g.a(arrayOfByte2);
             i();
             a7 = d(32);
@@ -2087,7 +2087,7 @@ public final class b extends FullCanvas
         throws IOException {
         Image[] arrayOfImage = new Image[paramInt];
         for (int i1 = 0; i1 < paramInt; i1++)
-            arrayOfImage[i1] = l();
+            arrayOfImage[i1] = readImageFromR();
         return arrayOfImage;
     }
 
@@ -2128,7 +2128,7 @@ public final class b extends FullCanvas
         return arrayOfString;
     }
 
-    public static Image l() {
+    public static Image readImageFromR() {
         try {
             int i1 = a5.readInt();
             byte[] arrayOfByte = new byte[i1];
@@ -2141,7 +2141,7 @@ public final class b extends FullCanvas
         return null;
     }
 
-    public static byte[] m() {
+    public static byte[] readBytesArrayFromR() {
         try {
             int i1 = a5.readInt();
             byte[] arrayOfByte = new byte[i1];
