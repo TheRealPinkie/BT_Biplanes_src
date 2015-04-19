@@ -2119,7 +2119,7 @@ public final class b extends FullCanvas
     }
 
     public static String[] b(String paramString)
-zsh:1: command not found: s
+    {
         DataInputStream localDataInputStream = new DataInputStream(paramString.getClass().getResourceAsStream(paramString));
         int i1 = localDataInputStream.readInt();
         String[] arrayOfString = new String[i1];
