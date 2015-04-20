@@ -3,7 +3,7 @@
 
 We are two guys from Яussia and we wanna port BT Biplanes to modern platforms. For this we need source code of the original game. In this repo we'll try to deobfuscate the decompiled code.
 
-# Classes:
+## Classes:
 * BluetoothBiplanes –- entry point, calls b
 * b — main class
 * c — looks like font parser
@@ -18,7 +18,7 @@ We are two guys from Яussia and we wanna port BT Biplanes to modern platforms. 
 * ~~l, m — auxiliary BT~~
 * ~~n — dummy class~~
 
-# Resourses:
+## Resourses:
 * ad*.png — obviously, ads
 * f — main font (f.png — parsed)
 * fzb, fzr — in-game digits fonts (fzb.png, fzr.png — parsed)

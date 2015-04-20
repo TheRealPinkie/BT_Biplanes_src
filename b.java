@@ -22,7 +22,11 @@ public class b extends Applet implements Runnable {
 	private static final long serialVersionUID = 1L;
 
    public void start() {
-      (new Thread(this)).start();
+       if (this.b2 == null) {
+           this.b2 = new Thread(this);
+           this.b2.start();
+       }
+       bbb = false;
    }
    
    public static int aaa;
@@ -1181,14 +1185,6 @@ public class b extends Applet implements Runnable {
        case 6:
        case 7:
        }
-   }
-
-   public void f() {
-       if (this.b2 == null) {
-           this.b2 = new Thread(this);
-           this.b2.start();
-       }
-       bbb = false;
    }
 
    public void keyPressed(int paramInt) {
