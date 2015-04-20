@@ -11,8 +11,8 @@ We are two guys from Яussia and we wanna port BT Biplanes to modern platforms. 
 * e — player class
 * f — bullet class
 * g — draws something
-* ~~h — looks like audio parser~~
-* i — I dunno
+* h — audio parser
+* i — keyboard class
 * ~~j — main BT class~~
 * ~~k — audio player?~~
 * ~~l, m — auxiliary BT~~
