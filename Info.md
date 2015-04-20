@@ -3,8 +3,8 @@
 * b — main class
 * c — looks like font parser
 * d — draws something
-* e — I dunno
-* f — draws something
+* e — player class
+* f — bullet class
 * g — draws something
 * ~~h — looks like audio parser~~
 * i — I dunno
