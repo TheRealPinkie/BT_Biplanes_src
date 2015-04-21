@@ -22,6 +22,7 @@ public class b extends Applet implements Runnable {
 	private static final long serialVersionUID = 1L;
 
    public void start() {
+       setSize(128, 128);
        if (this.b2 == null) {
            this.b2 = new Thread(this);
            this.b2.start();
