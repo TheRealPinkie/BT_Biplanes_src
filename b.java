@@ -1113,7 +1113,7 @@ public class b extends Applet implements Runnable {
            break;
        case 1:
        case 4:
-           if (i.c(10)) {
+           if (i.c(10)) { // UP
                if (ff) {
                    cq -= 1;
                    if (cq < 0)
@@ -1123,7 +1123,7 @@ public class b extends Applet implements Runnable {
                }
                a6[0].c();
            }
-           if (i.c(11)) {
+           if (i.c(11)) { // DOWN
                if (ff) {
                    cq += 1;
                    b0 = 3;
@@ -1133,7 +1133,7 @@ public class b extends Applet implements Runnable {
                }
                a6[0].d();
            }
-           if (i.c(12)) {
+           if (i.c(12)) { // LEFT
                if (ff) {
                    switch (cq) {
                    case 0:
@@ -1156,7 +1156,7 @@ public class b extends Applet implements Runnable {
                }
                a6[0].b(2);
            }
-           if (i.c(13)) {
+           if (i.c(13)) { // RIGHT
                if (ff) {
                    switch (cq) {
                    case 0:
@@ -1172,7 +1172,7 @@ public class b extends Applet implements Runnable {
                }
                a6[0].b(3);
            }
-           if (i.c(14))
+           if (i.c(14)) // SELECT
                a6[0].a();
            switch (i1) {
            case 17:
