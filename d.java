@@ -20,7 +20,7 @@ public class d {
         if (((this.f == 0) || (this.f > 16)) && (this.f == 0)) {
             int i = this.a >> 5;
             int j = this.bb >> 5;
-            paramGraphics.drawImage(b.a8[this.e], i, j, new Color(33), null);
+            paramGraphics.drawImage(b.a8[this.e], i, j, null); // Anchor: 33
             this.a += this.c;
             this.bb += this.d;
             this.d += 25;

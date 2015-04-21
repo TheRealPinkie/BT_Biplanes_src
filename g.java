@@ -158,17 +158,17 @@ public class g {
     public static boolean a(Graphics paramGraphics, int paramInt1, int paramInt2, int paramInt3) {
         if ((a == 14) || (a == 92)) {
             if ((paramInt1 == 0) || (b.af[(paramInt1 - 1)] != false))
-                paramGraphics.drawImage(b.a8[(43 + paramInt1)], paramInt2, paramInt3, new Color(20), null);
+                paramGraphics.drawImage(b.a8[(43 + paramInt1)], paramInt2, paramInt3, null); // Anchor: 20
             else
-                paramGraphics.drawImage(b.a8[51], paramInt2, paramInt3, new Color(20), null);
+                paramGraphics.drawImage(b.a8[51], paramInt2, paramInt3, null); // Anchor: 20
             paramInt2 += 18;
             return true;
         }
         if ((a == 60) || (a == 82)) {
             if ((paramInt1 == 0) || (b.af[(paramInt1 - 1)] != false))
-                paramGraphics.drawImage(b.a8[(47 + paramInt1)], paramInt2, paramInt3, new Color(20), null);
+                paramGraphics.drawImage(b.a8[(47 + paramInt1)], paramInt2, paramInt3, null); // Anchor: 20
             else
-                paramGraphics.drawImage(b.a8[52], paramInt2, paramInt3, new Color(20), null);
+                paramGraphics.drawImage(b.a8[52], paramInt2, paramInt3, null); // Anchor: 20
             paramInt2 += 18;
             return true;
         }

@@ -572,7 +572,7 @@ public class e {
             }
         }
         if (this.r != 255) {
-            paramGraphics.drawImage(b.a8[(30 + this.s)], this.r, 189, new Color(33), null);
+            paramGraphics.drawImage(b.a8[(30 + this.s)], this.r, 189, null); // Anchor: 33
             this.s += 1;
             if (this.s == 5) {
                 this.r = 255;
@@ -647,11 +647,11 @@ public class e {
             i9 = this.f;
             if ((this.i == 3) && (this.aq))
                 i9 += 16;
-            paramGraphics.drawImage(b.a7[i9], this.d, this.e, new Color(3), null);
+            paramGraphics.drawImage(b.a7[i9], this.d, this.e, null); // Anchor: 3
             break;
         case 2:
             if (this.f < 7) {
-                paramGraphics.drawImage(b.a8[(this.f + 2)], this.d, this.e, new Color(3), null);
+                paramGraphics.drawImage(b.a8[(this.f + 2)], this.d, this.e, null); // Anchor: 3
                 this.f += 1;
             }
             else {
@@ -663,18 +663,18 @@ public class e {
         }
         switch (this.v) {
         case 2:
-            paramGraphics.drawImage(b.a8[(27 + this.ac)], this.w >> 6, (this.x >> 6) - 10, new Color(3), null);
+            paramGraphics.drawImage(b.a8[(27 + this.ac)], this.w >> 6, (this.x >> 6) - 10, null); // Anchor: 3
         case 1:
         case 4:
         case 5:
-            paramGraphics.drawImage(b.a8[(21 + this.aa)], this.w >> 6, this.x >> 6, new Color(3), null);
+            paramGraphics.drawImage(b.a8[(21 + this.aa)], this.w >> 6, this.x >> 6, null); // Anchor: 3
             break;
         case 3:
-            paramGraphics.drawImage(b.a8[(17 + this.aa)], this.w >> 6, this.x >> 6, new Color(3), null);
+            paramGraphics.drawImage(b.a8[(17 + this.aa)], this.w >> 6, this.x >> 6, null); // Anchor: 3
         }
         if ((this.a < 2) && (this.p > 0)) {
             if (this.p == 2) {
-                paramGraphics.drawImage(b.a8[(14 + this.q)], this.d, this.e, new Color(3), null);
+                paramGraphics.drawImage(b.a8[(14 + this.q)], this.d, this.e, null); // Anchor: 3
                 this.q += 1;
                 if (this.q > 2)
                     this.q = 0;
@@ -690,7 +690,7 @@ public class e {
                     }
                 }
                 else {
-                    paramGraphics.drawImage(b.a8[(this.ay[i10] + 9)], this.aw[i10], this.ax[i10], new Color(3), null);
+                    paramGraphics.drawImage(b.a8[(this.ay[i10] + 9)], this.aw[i10], this.ax[i10], null); // Anchor: 3
                     this.ay[i10] += 1;
                     if (this.ay[i10] > 4)
                         this.aw[i10] = -1;

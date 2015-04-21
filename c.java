@@ -264,7 +264,7 @@ public class c {
                     int i6 = this.f[i5];
                     int i7 = paramInt2 + i2;
                     paramGraphics.clipRect(paramInt1, i7, i6, this.a);
-                    paramGraphics.drawImage(this.c, paramInt1 - this.d[i5], i7 - this.e[i5], new Color(20), null);
+                    paramGraphics.drawImage(this.c, paramInt1 - this.d[i5], i7 - this.e[i5], null); // Anchor: 20
                     paramGraphics.setClip(j, k, m, n);
                     paramInt1 += i6 + 0;
                 }
