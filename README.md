@@ -6,11 +6,11 @@ We are two guys from Яussia and we wanna port BT Biplanes to modern platforms. 
 ## Classes:
 * ~~BluetoothBiplanes –- entry point, calls b~~
 * b — main class
-* c — looks like font parser
+* c — font parser
 * d — draws something
 * e — player class
 * f — bullet class
-* g — draws something
+* g — draws menus
 * h — audio parser
 * i — keyboard class
 * ~~j — main BT class~~
