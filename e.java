@@ -11,7 +11,7 @@ public class e {
     public int f;
     public int g;
     public int h; // Angle
-    public int i;
+    public int i; // Orientation
     public int j;
     public int k;
     public int l;
@@ -54,7 +54,7 @@ public class e {
     public int[] aw; // x-coor of smoke
     public int[] ax; // y-coor of smoke
     public int[] ay; // smoke frame id
-    public static final int[] az = new int[32];
+    public static final int[] az = new int[32]; // Angles 
     public static final int a0 = 22;
 
     public e(boolean paramBoolean) {
