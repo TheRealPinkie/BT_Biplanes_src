@@ -4,12 +4,12 @@ import java.awt.Color;
 
 public class e {
     public int a;
-    public int bb;
-    public int c;
+    public int bb; // x-coor
+    public int c; // y-coor
     public int d;
     public int e;
     public int f;
-    public int g;
+    public int g; // Velocity
     public int h; // Angle
     public int i; // Orientation
     public int j;
@@ -35,16 +35,16 @@ public class e {
     public int ad;
     public int ae;
     public int af; // Hit rate
-    public int ag; // AI coefficient
-    public int ah; // AI coefficient
-    public int ai; // AI coefficient
-    public int aj; // AI coefficient
-    public int ak; // AI coefficient
-    public int al; // AI coefficient
-    public int am; // AI coefficient
+    public int ag;
+    public int ah;
+    public int ai;
+    public int aj;
+    public int ak;
+    public int al;
+    public int am;
     public String an = ""; // Hit rate
     public e ao; // Enemy
-    public boolean ap;
+    public boolean ap; // Is alive
     public boolean aq;
     public boolean ar;
     public boolean as;
@@ -147,7 +147,7 @@ public class e {
         b.c(this);
         this.at = true;
         int i1 = this.u * 7;
-        this.ag = b.bs[(i1++)];
+        this.ag = b.bs[(i1++)]; // AI coefficients
         this.ah = b.bs[(i1++)];
         this.ai = b.bs[(i1++)];
         this.aj = b.bs[(i1++)];
