@@ -35,13 +35,13 @@ public class e {
     public int ad;
     public int ae;
     public int af; // Hit rate
-    public int ag;
-    public int ah;
-    public int ai;
-    public int aj;
-    public int ak;
-    public int al;
-    public int am;
+    public int ag; // AI coefficient
+    public int ah; // AI coefficient
+    public int ai; // AI coefficient
+    public int aj; // AI coefficient
+    public int ak; // AI coefficient
+    public int al; // AI coefficient
+    public int am; // AI coefficient
     public String an = ""; // Hit rate
     public e ao; // Enemy
     public boolean ap; // Is alive
