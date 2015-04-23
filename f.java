@@ -2,30 +2,30 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 public class f {
-    public int a;
-    public int bb;
-    public int c;
-    public int d;
-    public e e;
+    public int a; // X
+    public int bb; // Y
+    public int c; // Angle
+    public int d; // TTL
+    public e e; // Owner
 
-    public f(e parame) {
+    public f(e parame) { // Constructor
         this.e = parame;
         this.bb = 255;
     }
 
-    public void a(int paramInt1, int paramInt2, int paramInt3) {
+    public void a(int paramInt1, int paramInt2, int paramInt3) {  // Shot
         this.a = (paramInt1 >> 6);
         this.bb = (paramInt2 >> 6);
         this.c = paramInt3;
         this.d = 0;
     }
 
-    public void a(boolean paramBoolean) {
+    public void a(boolean paramBoolean) { // Pause
         this.bb = 255;
-        this.e.a(paramBoolean);
+        this.e.a(paramBoolean); // hit
     }
 
-    public void a(Graphics paramGraphics, boolean paramBoolean) {
+    public void a(Graphics paramGraphics, boolean paramBoolean) { // Tick
         if (this.bb == 255)
             return;
         if (paramBoolean) {
