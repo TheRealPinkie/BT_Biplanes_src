@@ -51,9 +51,9 @@ public class e {
     public boolean at;
     public boolean au;
     public f[] av = new f[2];
-    public int[] aw;
-    public int[] ax;
-    public int[] ay;
+    public int[] aw; // x-coor of smoke
+    public int[] ax; // y-coor of smoke
+    public int[] ay; // smoke frame id
     public static final int[] az = new int[32];
     public static final int a0 = 22;
 
