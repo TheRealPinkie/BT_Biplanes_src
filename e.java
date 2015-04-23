@@ -20,8 +20,8 @@ public class e {
     public int o;
     public int p;
     public int q;
-    public int r;
-    public int s;
+    public int r; // x-coor of a bullet that smashed terrain
+    public int s; // Animation counter of that bullet
     public int t;
     public int u;
     public int v; // Lifes
