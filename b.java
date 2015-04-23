@@ -1176,10 +1176,10 @@ public class b extends Applet implements Runnable {
                 a6[0].a();
             switch (i1) {
             case 17:
-                a6[0].b();
+                a6[0].b(); // Eject
                 break;
             case 16:
-                g.a(30);
+                g.a(30); // Pause
                 aaa = 2;
             }
             break;

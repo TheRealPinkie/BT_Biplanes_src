@@ -10,7 +10,7 @@ public class e {
     public int e;
     public int f;
     public int g;
-    public int h;
+    public int h; // Angle
     public int i;
     public int j;
     public int k;
@@ -24,7 +24,7 @@ public class e {
     public int s;
     public int t;
     public int u;
-    public int v;
+    public int v; // Lifes
     public int w;
     public int x;
     public int y;
@@ -77,7 +77,7 @@ public class e {
         this.aq = paramBoolean;
     }
 
-    public void a() {
+    public void a() { // Fire
         if ((this.k > 0) || (this.v != 0))
             return;
         if (this.a == 1) {
@@ -107,7 +107,7 @@ public class e {
         this.an = (Integer.toString(this.af) + "%");
     }
 
-    public void b() {
+    public void b() { // Ejection
         if (this.a == 2)
             return;
         if ((this.a != 1) || (this.v != 0)) {
@@ -125,12 +125,12 @@ public class e {
         this.x = this.c;
         this.v = 1;
         int i1;
-        if (this.i == 2)
+        if (this.i == 2) // left or right
             i1 = b.g(this.h + 90);
         else
             i1 = b.g(this.h - 90);
-        this.y = (b.h(i1) * 300 >> 7);
-        this.z = (-(b.f(i1) * 300) >> 7);
+        this.y = (b.h(i1) * 300 >> 7); // x speed
+        this.z = (-(b.f(i1) * 300) >> 7); // y spped
     }
 
     public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4) {
@@ -147,7 +147,7 @@ public class e {
         b.c(this);
         this.at = true;
         int i1 = this.u * 7;
-        this.ag = b.bs[(i1++)];
+        this.ag = b.bs[(i1++)]; // AI coefficients
         this.ah = b.bs[(i1++)];
         this.ai = b.bs[(i1++)];
         this.aj = b.bs[(i1++)];
@@ -195,7 +195,7 @@ public class e {
         while (i2 > 0);
     }
 
-    public void b(int paramInt) {
+    public void b(int paramInt) { // Rotate
         if ((this.j > 0) || (this.v != 0)) {
             switch (this.v) {
             case 2:
@@ -253,7 +253,7 @@ public class e {
         this.j = 2;
     }
 
-    public void c() {
+    public void c() { // Speed up
         if (this.v != 0)
             return;
         this.as = true;
@@ -281,7 +281,7 @@ public class e {
         }
     }
 
-    public void d() {
+    public void d() { // Speed down
         if (this.v != 0)
             return;
         this.as = false;
