@@ -16,8 +16,8 @@ public class e {
     public int k;
     public int l;
     public int m;
-    public int n;
-    public int o;
+    public int n; // Number of shots
+    public int o; // Number of hits
     public int p;
     public int q;
     public int r; // x-coor of a bullet that smashed terrain
@@ -34,7 +34,7 @@ public class e {
     public int ac;
     public int ad;
     public int ae;
-    public int af;
+    public int af; // Hit rate
     public int ag;
     public int ah;
     public int ai;
@@ -42,15 +42,15 @@ public class e {
     public int ak;
     public int al;
     public int am;
-    public String an = "";
-    public e ao;
+    public String an = ""; // Hit rate
+    public e ao; // Enemy
     public boolean ap;
     public boolean aq;
     public boolean ar;
     public boolean as;
     public boolean at;
     public boolean au;
-    public f[] av = new f[2];
+    public f[] av = new f[2]; // Bullets
     public int[] aw; // x-coor of smoke
     public int[] ax; // y-coor of smoke
     public int[] ay; // smoke frame id
