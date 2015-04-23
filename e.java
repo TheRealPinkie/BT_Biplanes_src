@@ -6,34 +6,34 @@ public class e {
     public int a;
     public int bb; // x-coor
     public int c; // y-coor
-    public int d;
-    public int e;
+    public int d; // x-coor on screen
+    public int e; // y-coor on screen
     public int f;
     public int g; // Velocity
     public int h; // Angle
     public int i; // Orientation
     public int j;
-    public int k;
+    public int k; // Bullet CD
     public int l;
-    public int m;
+    public int m; // Score
     public int n; // Number of shots
     public int o; // Number of hits
     public int p;
-    public int q;
+    public int q; // Fire animation counter
     public int r; // x-coor of a bullet that smashed terrain
     public int s; // Animation counter of that bullet
     public int t;
-    public int u;
+    public int u; // AI id
     public int v; // Lifes
-    public int w;
-    public int x;
-    public int y;
-    public int z;
-    public int aa;
+    public int w; // x-coor of ejected pilot
+    public int x; // y-coor of ejected pilot
+    public int y; // x-velocity of ejected pilot
+    public int z; // y-velocity of ejected pilot
+    public int aa; // Frame id of ejected pilot animation
     public int ab;
-    public int ac;
+    public int ac; // Parachute rotation
     public int ad;
-    public int ae;
+    public int ae; // Used only in b
     public int af; // Hit rate
     public int ag; // AI coefficient
     public int ah; // AI coefficient
@@ -44,18 +44,18 @@ public class e {
     public int am; // AI coefficient
     public String an = ""; // Hit rate
     public e ao; // Enemy
-    public boolean ap; // Is alive
+    public boolean ap; // Is alive?
     public boolean aq;
     public boolean ar;
     public boolean as;
-    public boolean at;
-    public boolean au;
+    public boolean at; // Is alive?
+    public boolean au; // Maybe debug var, always false
     public f[] av = new f[2]; // Bullets
     public int[] aw; // x-coor of smoke
     public int[] ax; // y-coor of smoke
     public int[] ay; // smoke frame id
     public static final int[] az = new int[32]; // Angles 
-    public static final int a0 = 22;
+    public static final int a0 = 22; // Used only in b
 
     public e(boolean paramBoolean) {
         int i1 = 2;
@@ -294,7 +294,7 @@ public class e {
         }
     }
 
-    public void e() {
+    public void e() { // AI
         switch (this.a) {
         case 0:
             c();
@@ -385,7 +385,7 @@ public class e {
         b.a(25, this.d, this.e, i1 - 100, i1 + 100, -270, -50);
     }
 
-    public void a(Graphics paramGraphics, boolean paramBoolean) {
+    public void a(Graphics paramGraphics, boolean paramBoolean) { // Tick
         if ((paramBoolean) && (!this.au)) {
             if (this.as)
                 c();
